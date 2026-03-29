@@ -1,0 +1,26 @@
+{
+  "id": "anon-0004",
+  "title": "Strava：ヒートマップ公開により米軍秘密基地の位置が露出",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Strava",
+  "incident_category": ["inadequate_anonymization", "surveillance_tracking"],
+  "severity": "high",
+  "occurred_at": "2018-01",
+  "summary": "フィットネストラッキングアプリStravaが2017年11月に公開したグローバルヒートマップ（全ユーザーの運動経路の集約データ）から、シリア、アフガニスタン、ジブチ、ソマリアなどに所在する米軍およびその他各国軍の秘密基地の位置、内部構造、兵士の巡回ルートが判明できることが2018年1月にオーストラリアの大学院生Nathan Ruserにより指摘された。基地周辺では軍関係者以外の利用者がほぼ皆無のため、集約されたヒートマップ上でも基地の輪郭が鮮明に浮かび上がった。",
+  "impact": "世界各地の軍事基地・CIA関連施設の位置と活動パターンが事実上公開された。米国国防総省が対応を迫られ、軍関係者のフィットネスアプリ利用に関するポリシー見直しが行われた。位置情報データの集約が個人だけでなく国家安全保障に対する脅威となりうることが実証された。",
+  "root_cause": "Stravaがヒートマップのデータを匿名化・集約していたにもかかわらず、利用者の地理的偏りを考慮していなかった。軍事基地のような限られた人員しかいない地域では、集約データであっても個別の活動パターンが容易に識別可能であった。ユーザーの位置情報共有がデフォルトでオプトインになっていた。",
+  "response": "Stravaは声明を発表し、ユーザーに対してプライバシー設定の確認を呼びかけた。ヒートマップからオプトアウトする機能を強化した。米国国防総省は2018年8月に軍関係者に対して展開地域でのGPS機能付きフィットネスデバイスの使用を制限するポリシーを発表した。",
+  "lessons_learned": "データの匿名化・集約は、利用者の母集団が限定される環境では十分なプライバシー保護にならない。位置情報データの公開においては、地理的コンテキストに応じたリスク評価が必要である。センシティブな環境における位置情報の共有は、デフォルトでオプトアウト設計とすべきである。",
+  "tags": ["Strava", "ヒートマップ", "位置情報", "軍事基地", "匿名化不備", "国家安全保障", "フィットネスアプリ", "GPS追跡"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Fitness tracking app Strava gives away location of secret US army bases - The Guardian",
+      "url": "https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

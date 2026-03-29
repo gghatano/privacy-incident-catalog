@@ -1,0 +1,31 @@
+{
+  "id": "algo-0001",
+  "title": "Amazon：AI採用ツールにおける女性差別的バイアスの発覚",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Amazon",
+  "incident_category": ["algorithmic_discrimination"],
+  "severity": "high",
+  "occurred_at": "2018-10",
+  "summary": "Amazonが2014年から開発していたAI採用選考ツールが、女性に対して体系的な不利益を与えていたことが2018年に報道された。同ツールは過去10年分の履歴書データで訓練されていたが、IT業界の男性偏重を反映し、「women's」という単語を含む履歴書や女子大学の出身者を減点するなど、性別に基づく差別的な評価を行っていた。",
+  "impact": "AI採用における性別バイアスの具体的事例として世界的に報道され、アルゴリズム差別に関する議論を大きく活性化させた。企業のAI採用ツール導入に対する社会的な警戒感が高まり、EU等でのAI規制議論にも影響を与えた。",
+  "root_cause": "訓練データが過去10年間の応募者履歴書に基づいており、IT業界における男性優位の応募傾向をそのまま学習した。結果として、男性の履歴書に多い表現（「executed」「captured」等）を高評価し、女性に関連する用語を減点する傾向が生まれた。公平性に対する設計段階でのチェックが不十分であった。",
+  "response": "Amazonは問題の発覚後、女性関連用語を中立化するなどの修正を試みたが、他の領域でもバイアスが残存する可能性を排除できなかったため、最終的にこのAI採用ツールの運用を中止した。同社はこのツールが実際の採用判断に単独で使われたことはなかったと説明した。",
+  "lessons_learned": "AIの訓練データに含まれる歴史的バイアスがモデルの出力に再現されるリスクが実証された。採用など高リスクな意思決定にAIを適用する場合、公平性の監査（fairness audit）を設計段階から組み込む必要がある。また、バイアスの事後的な修正には限界があり、根本的なデータ設計とモデル評価の見直しが不可欠である。",
+  "tags": ["アルゴリズムバイアス", "AI採用", "性別差別", "機械学習", "公平性", "訓練データ", "Amazon", "HR Tech"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Amazon ditched AI recruitment software because it was biased against women - MIT Technology Review",
+      "url": "https://www.technologyreview.com/2018/10/10/139858/amazon-ditched-ai-recruitment-software-because-it-was-biased-against-women/"
+    },
+    {
+      "source_type": "web",
+      "title": "Why Amazon's Automated Hiring Tool Discriminated Against Women - ACLU",
+      "url": "https://www.aclu.org/news/womens-rights/why-amazons-automated-hiring-tool-discriminated-against"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

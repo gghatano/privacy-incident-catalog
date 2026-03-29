@@ -1,0 +1,26 @@
+{
+  "id": "priv-0014",
+  "title": "BetterHelp：メンタルヘルス相談データをFacebook等に広告目的で共有",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "BetterHelp, Inc.",
+  "incident_category": ["privacy_violation", "unauthorized_use"],
+  "severity": "high",
+  "occurred_at": "2023-03",
+  "summary": "オンラインカウンセリングプラットフォームBetterHelpが、ユーザーのメンタルヘルスに関するセンシティブな情報（カウンセリング利用事実、健康質問票の回答、メールアドレスなど）をFacebook、Snapchat、Criteo、Pinterestなどの広告プラットフォームに共有し、ターゲティング広告に利用していた。BetterHelpは利用者に対して健康データを広告に使用しないと約束していたが、実際には新規利用者獲得のための「類似オーディエンス」作成などに健康データを利用していた。",
+  "impact": "約700万人のBetterHelpユーザーのメンタルヘルス関連データが広告プラットフォームに共有された。FTCは2023年3月にBetterHelpに対して780万ドルの返金命令を出し、健康データの広告利用を恒久的に禁止した。メンタルヘルスというセンシティブな領域でのデータ悪用事例として大きな社会的反響を呼んだ。",
+  "root_cause": "BetterHelpがサインアップ時の健康質問票データやアプリ利用データを広告トラッキングツール経由で広告プラットフォームに送信していた。「類似オーディエンス」のターゲティングのためにユーザーのメールアドレスとメンタルヘルス情報をハッシュ化して共有していた。プライバシーポリシーの約束と実際の運用が矛盾していた。",
+  "response": "FTCは2023年3月にBetterHelpとの和解を発表。780万ドルの消費者返金と、健康データの広告利用の恒久的禁止を命じた。BetterHelpは影響を受けた利用者への通知と、データ取り扱いの包括的な改善に合意した。広告目的で共有したデータの削除も義務付けられた。",
+  "lessons_learned": "メンタルヘルスデータは最もセンシティブな個人情報の一つであり、広告利用は利用者の信頼を根本的に損なう。サインアップ時の健康質問票もセンシティブなヘルスデータとして保護すべきである。オンラインヘルスケアサービスは、広告テクノロジーとの統合において健康データの流出を防ぐ技術的・組織的な対策を講じる必要がある。",
+  "tags": ["BetterHelp", "メンタルヘルス", "カウンセリング", "広告共有", "FTC", "返金命令", "Facebook", "Snapchat", "ヘルステック"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "FTC to Ban BetterHelp from Revealing Consumers' Data Including Sensitive Mental Health Information to Facebook and Others for Advertising - FTC",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/03/ftc-ban-betterhelp-revealing-consumers-data-including-sensitive-mental-health-information-facebook"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

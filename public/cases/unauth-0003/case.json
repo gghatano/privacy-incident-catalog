@@ -1,0 +1,36 @@
+{
+  "id": "unauth-0003",
+  "title": "Google Street View：走行車両によるWi-Fiデータ無断収集",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Google",
+  "incident_category": ["unauthorized_use", "privacy_violation"],
+  "severity": "high",
+  "occurred_at": "2010-05",
+  "summary": "Googleのストリートビュー撮影車両が、世界各国で道路の撮影を行う際に、周辺の無線LANネットワークからペイロードデータ（メール内容、パスワード、閲覧履歴等）を無断で収集・保存していたことが2010年5月に発覚した。収集されたデータは約600ギガバイトに及び、30カ国以上で個人の通信内容が傍受されていた。Googleは当初「誤って収集した」と説明したが、2012年のFCC調査でエンジニアが意図的にデータ収集コードを実装していたことが判明した。",
+  "impact": "30カ国以上のプライバシー当局が調査を開始。少なくとも9カ国がGoogleの盗聴法違反を認定した。フランスが10万ユーロ、ドイツが14万5,000ユーロの罰金を科した。米国では38州の司法長官が共同で提訴し、2013年に700万ドルの和解金が支払われた。通信傍受に対する社会的な懸念が高まり、公共空間でのデータ収集に関する議論が活発化した。",
+  "root_cause": "ストリートビュー車両にWi-Fiネットワークのマッピング機能が搭載されていたが、そのソフトウェアにオープンなWi-Fiネットワークからのペイロードデータ収集機能が含まれていた。社内のコードレビューやプライバシー影響評価が不十分であり、エンジニアが実装した傍受機能が管理層に認識されないまま運用された。プロジェクト管理とプライバシーガバナンスの欠如が根本原因であった。",
+  "response": "Googleは2010年5月に問題を認め、Wi-Fiデータの収集を停止。収集したペイロードデータの破棄に同意した。米国38州との和解で700万ドルを支払い、従業員向けプライバシー教育プログラムの実施と、消費者向けプライバシー保護の啓発キャンペーンの展開を約束した。各国のデータ保護当局の命令に従い、データ削除と再発防止策を実施した。",
+  "lessons_learned": "大規模なデータ収集プロジェクトでは、収集するデータの範囲と目的を明確に定義し、プライバシー影響評価を事前に実施する必要がある。エンジニアリングチームの裁量で収集範囲が拡大されるリスクに対し、コードレビューとガバナンス体制の整備が不可欠。「誤って収集した」という弁明は信頼性を損ない、意図的であったことが後に判明すると企業の信用をさらに毀損する。",
+  "tags": ["Google", "Street View", "Wi-Fi傍受", "通信傍受", "ペイロードデータ", "無断収集", "プライバシーガバナンス", "多国間規制"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Google Street View privacy concerns - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Google_Street_View_privacy_concerns"
+    },
+    {
+      "source_type": "web",
+      "title": "Google Will Pay $7 Million To Settle Street View Data Capturing Case - NPR",
+      "url": "https://www.npr.org/sections/thetwo-way/2013/03/12/174117502/google-will-pay-7-million-to-settle-street-view-data-capturing-case"
+    },
+    {
+      "source_type": "web",
+      "title": "Investigations of Google Street View - EPIC",
+      "url": "https://epic.org/documents/investigations-of-google-street-view/"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

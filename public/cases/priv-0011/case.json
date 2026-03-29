@@ -1,0 +1,26 @@
+{
+  "id": "priv-0011",
+  "title": "Google：Project Nightingaleによる数百万人分の医療データ秘密共有",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Google／Ascension",
+  "incident_category": ["privacy_violation", "unauthorized_use"],
+  "severity": "critical",
+  "occurred_at": "2019-11",
+  "summary": "2019年11月、Googleが米国第2位のカトリック系医療システムAscensionと提携し、「Project Nightingale」と呼ばれるプロジェクトのもと、21州にわたる数千万人分の患者の医療データ（氏名、生年月日、診断結果、入院記録、検査結果など）をGoogleに移管していたことがWall Street Journalの報道で発覚した。患者や医師への通知・同意取得は行われておらず、Google社内では少なくとも150名の従業員がデータにアクセスしていた。",
+  "impact": "数千万人規模の患者の詳細な医療記録がGoogle側に共有された。患者および医療従事者に対する事前通知がなかったことが批判を浴びた。米国保健福祉省（HHS）の公民権局が調査を開始。医療データのテック企業への共有に関する規制議論が活発化した。",
+  "root_cause": "米国のHIPAA（医療保険の携行性と責任に関する法律）が「ビジネスアソシエイト」契約のもとでの医療データ共有を患者同意なしに認めている規定をGoogleとAscensionが利用した。法的には合法であっても、患者の期待に反するデータ共有であり、透明性が著しく欠如していた。",
+  "response": "GoogleとAscensionは、プロジェクトがHIPAAに準拠した合法的な取り組みであると主張した。米国上院議員からの質問書が送付され、HHSが調査を開始。Googleはデータの利用目的を医療サービスの改善に限定すると説明した。Ascensionも患者データの保護を優先すると声明を発表した。",
+  "lessons_learned": "法的に許容されるデータ共有であっても、患者の合理的な期待に反する場合は社会的信頼を損なう。医療データの第三者共有においては、法的コンプライアンスだけでなく、患者への透明性の確保が不可欠である。テック企業と医療機関の提携において、データのアクセス範囲と利用目的の明確な制限と監査体制が必要である。",
+  "tags": ["Google", "Ascension", "Project Nightingale", "医療データ", "HIPAA", "秘密共有", "患者同意", "テック企業", "医療提携"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Google's 'Project Nightingale' gathers personal health data on millions of Americans - The Guardian",
+      "url": "https://www.theguardian.com/technology/2019/nov/12/google-medical-data-project-nightingale-secret-transfer-us-health-information"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}
