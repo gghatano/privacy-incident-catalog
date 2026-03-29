@@ -7,22 +7,20 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const casesDir = path.resolve(__dirname, '..', 'public', 'cases')
 
-interface IndexJson {
-  cases: string[]
-}
+// Scan directories directly instead of relying on index.json
+const caseIds = fs.readdirSync(casesDir).filter((entry) => {
+  const entryPath = path.join(casesDir, entry)
+  return fs.statSync(entryPath).isDirectory()
+}).sort()
 
-const indexPath = path.join(casesDir, 'index.json')
-const indexRaw = fs.readFileSync(indexPath, 'utf-8')
-const index: IndexJson = JSON.parse(indexRaw)
-
-if (index.cases.length === 0) {
-  console.log('事例なし（index.json が空配列です）')
+if (caseIds.length === 0) {
+  console.log('事例なし（public/cases/ にディレクトリがありません）')
   process.exit(0)
 }
 
 let errorCount = 0
 
-for (const id of index.cases) {
+for (const id of caseIds) {
   const casePath = path.join(casesDir, id, 'case.json')
 
   if (!fs.existsSync(casePath)) {
@@ -55,6 +53,6 @@ if (errorCount > 0) {
   console.error(`\nバリデーション失敗: ${errorCount} 件のエラー`)
   process.exit(1)
 } else {
-  console.log(`バリデーション成功: ${index.cases.length} 件の事例を検証しました`)
+  console.log(`バリデーション成功: ${caseIds.length} 件の事例を検証しました`)
   process.exit(0)
 }
