@@ -1,0 +1,48 @@
+id	country	case_title	category	primary_url
+jp-001	JP	JR東日本 Suica乗降履歴の第三者提供	匿名化・説明不足・第三者提供	https://www.itmedia.co.jp/news/articles/1307/26/news110.html
+jp-002	JP	JR東日本 Suicaデータ活用に関する当時の論点整理	匿名化・説明不足・第三者提供	https://www.nhk.or.jp/gendai/articles/3307/
+jp-003	JP	リクナビ 内定辞退率提供	推論・目的外利用・説明不足	https://www.ppc.go.jp/files/pdf/191204_houdou.pdf
+jp-004	JP	リクナビ事件の法的論点整理	推論・目的外利用・説明不足	https://komon.jmatsuda-law.com/wp-content/uploads/2019/08/2019_6_1.pdf
+jp-005	JP	LINE 中国委託先からの個人情報アクセス	越境移転・委託管理・説明不足	https://www.ppc.go.jp/files/pdf/210407_shiryou-1.pdf
+jp-006	JP	LINE問題を受けた特別委員会最終報告	越境移転・委託管理・説明不足	https://www.lycorp.co.jp/ja/ir/news/auto_20211018412557/pdfFile.pdf
+jp-007	JP	CCC/Tカード 令状なし捜査照会対応	第三者提供・利用者期待との乖離	https://www.businesslawyers.jp/articles/522
+jp-008	JP	CCC/Tカード 規約・データ活用を巡る批判	第三者提供・説明不足	https://www.bengo4.com/c_18/n_2294/
+jp-009	JP	破産者マップ	公開情報の再編・検索容易化・倫理問題	https://www.itmedia.co.jp/news/articles/1903/19/news101.html
+jp-010	JP	QRコード読み取りアプリで位置情報送信	位置情報・説明不足	https://nlab.itmedia.co.jp/nl/articles/2209/29/news166.html
+jp-011	JP	岩手大学 出席確認アプリの位置情報問題	位置情報・監視性・説明不足	https://nlab.itmedia.co.jp/nl/articles/2104/14/news146.html
+jp-012	JP	JR大阪駅ビル 顔認証・自動追跡実験	顔認証・監視・説明不足	https://www.nict.go.jp/nrh/iinkai/report.pdf
+jp-013	JP	JR東日本 駅での顔認識検知運用	顔認証・監視・対象者検知	https://www.nichibenren.or.jp/document/statement/year/2021/211125.html
+jp-014	JP	店舗間の万引犯顔認証共有	顔認証・ブラックリスト共有・誤登録懸念	https://enterprisezine.jp/article/detail/10000
+jp-015	JP	渋谷書店3社の顔認証共同運用に関する論点	顔認証・共同利用・監視	https://jclu.org/wp-content/uploads/2024/06/Facial-recognition.pdf
+jp-016	JP	日本郵政グループ 非公開金融情報の不適切利用	目的外利用・同意不備	https://www.japanpost.jp/news/pressrelease/20240927189994/
+jp-017	JP	ゆうちょ銀行 非公開金融情報の不適切利用	目的外利用・同意不備	https://www.jp-bank.japanpost.jp/aboutus/press/2024/abt_prs_id001905.html
+jp-018	JP	日本郵政グループ 追加調査・再発防止策	目的外利用・同意不備	https://www.yuseimineika.go.jp/iinkai/dai284/siryou284-4.pdf
+jp-019	JP	AIイラスト生成サービス mimic 炎上	学習・悪用懸念・権利侵害懸念	https://nlab.itmedia.co.jp/nl/articles/2208/30/news150.html
+jp-020	JP	mimic サービス終了報道	学習・悪用懸念・権利侵害懸念	https://www.itmedia.co.jp/aiplus/articles/2504/15/news153.html
+jp-021	JP	企業広告で一般ユーザー投稿文言を転用	投稿利用・同意・クリエイティブ利用	https://nlab.itmedia.co.jp/nl/articles/2304/13/news184.html
+jp-022	JP	ENEOS レシート画像のSNS投稿	顧客情報取扱い・従業員不適切利用	https://nlab.itmedia.co.jp/nl/articles/2303/02/news154.html
+jp-023	JP	TSUTAYA 従業員による顧客情報示唆投稿	顧客情報取扱い・従業員不適切利用	https://nlab.itmedia.co.jp/nl/articles/2112/07/news160.html
+jp-024	JP	Anytime Fitness 会員情報濫用を示唆する投稿	顧客情報取扱い・従業員不適切利用	https://nlab.itmedia.co.jp/nl/articles/2407/30/news169.html
+jp-025	JP	カレログ	位置情報・行動監視・同意の実質性	https://www.dreamgate.gr.jp/contents/column/c-legal/38928
+
+id	country	case_title	category	primary_url	status_screening
+jp-add-001	JP	渋谷駅周辺 AIカメラ100台 人流解析プロジェクト	AIカメラ・人流解析・監視感・説明不足	https://www.itmedia.co.jp/business/articles/2309/07/news089.html	keep
+jp-add-002	JP	大阪ステーションシティ 顔認証・歩行認証実験	顔認証・行動追跡・大規模監視	https://www.osakaben.or.jp/speak/view.php?id=78	keep
+jp-add-003	JP	大阪ステーションシティ 顔認証実験の報道整理	顔認証・行動追跡・大規模監視	https://www.kinyobi.co.jp/kinyobinews/2014/03/26/%E5%A4%A7%E9%98%AA%E9%A7%85%E3%83%93%E3%83%AB%E5%86%85%E3%81%A7%E3%81%AE%E7%84%A1%E5%B7%AE%E5%88%A5%E6%92%AE%E5%BD%B1%E2%80%95%E2%80%95%E9%A1%94%E8%AA%8D%E8%A8%BC%E3%83%BB%E6%AD%A9%E8%A1%8C%E8%AA%8D/	keep
+jp-add-004	JP	JR東日本 駅構内の出所者等 顔認識検知運用	顔認証・監視・センシティブ属性に近い運用	https://news.livedoor.com/article/detail/21107851/	keep
+jp-add-005	JP	JR東日本 顔認識運用の法的論点整理	顔認証・監視・説明不足	https://www.acompany.tech/privacytechlab/jr-face_recognition-personal-information-protection-law	borderline
+jp-add-006	JP	アララ QRコードリーダーQ 位置情報送信問題	位置情報・説明不足・目的外利用懸念	https://nlab.itmedia.co.jp/cont/articles/3282515/	keep
+jp-add-007	JP	カレログ 恋人追跡アプリ	位置情報・行動監視・同意の実質性	https://nlab.itmedia.co.jp/cont/articles/3225645/	keep
+jp-add-008	JP	位置情報共有アプリの悪用が可視化された事件報道	位置情報・過剰共有・生活圏把握	https://newsdig.tbs.co.jp/articles/cbc/128934?display=1	borderline
+jp-add-009	JP	CLIP STUDIO PAINT 画像生成AI機能の搭載中止	生成AI・学習利用懸念・クリエイター反発	https://nlab.itmedia.co.jp/cont/articles/3347870/	keep
+jp-add-010	JP	mimic 正式版リリース時の再燃論点	生成AI・学習利用懸念・不正利用懸念	https://nlab.itmedia.co.jp/cont/articles/3351490/	borderline
+jp-add-011	JP	生成AI利用を巡るアニメイベント出演辞退	生成AI・クリエイティブ利用・反発	https://nlab.itmedia.co.jp/cont/articles/3380214/	borderline
+jp-add-012	JP	海上保安庁 生成AIイラスト入りパンフレット配布取りやめ	生成AI・著作権懸念・公的機関利用	https://note.com/mmmiyama/n/n7cf1e517fe21	borderline
+jp-add-013	JP	NEC 顔認証技術活用マーケティングサービスをめぐる論点	顔認証・マーケティング・利用者期待との乖離	https://www.i-ise.com/jp/information/media/2017/kansaiNUA_170621_koizumi.pdf	borderline
+jp-add-014	JP	顔識別・顔認証技術に関する調査報告書で整理された国内事例群	顔認証・ブラックリスト共有・設計不透明性	https://jclu.org/wp-content/uploads/2024/06/Facial-recognition.pdf	keep
+jp-add-015	JP	スマートシティ文脈のAIカメラ活用が社会受容で頓挫した事例研究	AIカメラ・スマートシティ・社会受容失敗	https://www.jstage.jst.go.jp/article/cpijkansai/22/0/22_61/_pdf	keep
+jp-add-016	JP	パーソナルデータ活用における消費者不安の典型例整理（Suica/Tポイント等含む）	パーソナルデータ活用・消費者反発・説明不足	https://webtan.impress.co.jp/e/2014/08/26/18047	borderline
+jp-add-017	JP	個人情報保護委員会 2019年動向調査 事例集	匿名加工・位置情報・購買履歴・利活用実務	https://www.ppc.go.jp/files/pdf/personal_date_cases2019.pdf	borderline
+jp-add-018	JP	個人情報保護委員会 匿名加工情報ページ	匿名加工・制度整理・事例集導線	https://www.ppc.go.jp/personalinfo/tokumeikakouInfo/	borderline
+jp-add-019	JP	個人情報保護委員会事務局レポート 匿名加工情報と消費者の受け止め	匿名加工・消費者反応・ユースケース	https://www.ppc.go.jp/files/pdf/290221_siryou3-2.pdf	borderline
+jp-add-020	JP	パーソナルデータ活用に関する近年の課題整理	個人データ利活用・顔認証・説明不足	https://businessandlaw.jp/articles/lawyersguidevote2025-file16/	borderline

@@ -1,0 +1,26 @@
+id	country	case_title	category	primary_url
+gl-001	Overseas	Facebook / Cambridge Analytica	政治プロファイリング・第三者提供	https://www.ftc.gov/legal-library/browse/cases-proceedings/182-3107-cambridge-analytica-llc-matter
+gl-002	Overseas	Facebook Emotion Contagion	同意なき実験・アルゴリズム操作	https://www.pnas.org/doi/10.1073/pnas.1320040111
+gl-003	Overseas	Facebook 顔認識訴訟	顔認識・同意・通知	https://www.aclu.org/press-releases/federal-court-rules-facebook-users-can-sue-company-over-unlawful-use-face-recognition
+gl-004	Overseas	Target 妊娠予測マーケティング	推論・センシティブ推定・不快感	https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/
+gl-005	Overseas	Strava Heatmap	集計データの可視化・再識別的リスク	https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases
+gl-006	Overseas	Google Project Nightingale	医療データ共有・説明不足	https://www.theguardian.com/technology/2019/nov/12/google-medical-data-project-nightingale-secret-transfer-us-health-information
+gl-007	Overseas	DeepMind × Royal Free NHS	医療データ利用・法的根拠・説明不足	https://ico.org.uk/for-the-public/ico-40/google-deepmind-and-class-action-lawsuit/
+gl-008	Overseas	NHS GPDPR data grab controversy	医療データ共有・オプトアウト騒動	https://evalian.co.uk/nhs-gp-data-sharing-controversy/
+gl-009	Overseas	Clearview AI	顔画像スクレイピング・顔認識DB化	https://www.clearview.ai/
+gl-010	Overseas	Clearview AI に対する規制・批判整理	顔画像スクレイピング・顔認識DB化	https://www.mcdermottlaw.com/insights/public-backlash-calls-use-of-facial-recognition-systems-into-question/
+gl-011	Overseas	Rite Aid 顔認識	顔認識・誤認・バイアス	https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without
+gl-012	Overseas	Everalbum / Ever	顔認識・同意不備・学習利用	https://www.ftc.gov/legal-library/browse/cases-proceedings/192-3172-everalbum-inc-matter
+gl-013	Overseas	GoodRx	健康情報の広告利用・第三者共有	https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising
+gl-014	Overseas	BetterHelp	メンタルヘルス情報の広告利用	https://www.ftc.gov/news-events/news/press-releases/2023/03/ftc-ban-betterhelp-revealing-consumers-data-including-sensitive-mental-health-information-facebook
+gl-015	Overseas	Flo Health	生理・妊活データの第三者共有	https://www.ftc.gov/news-events/news/press-releases/2021/06/ftc-finalizes-order-flo-health-fertility-tracking-app-shared-sensitive-health-data-facebook-google
+gl-016	Overseas	Premom	排卵・妊活データの広告利用	https://www.ftc.gov/news-events/news/press-releases/2023/05/ovulation-tracking-app-premom-will-be-barred-sharing-health-data-advertising-under-proposed-ftc
+gl-017	Overseas	Grindr	性的指向を含むセンシティブデータ共有	https://www.datatilsynet.no/en/regulations-and-tools/regulations/avgjorelser-fra-datatilsynet/2021/gebyr-til-grindr/
+gl-018	Overseas	Kochava	精密位置情報の販売	https://www.ftc.gov/news-events/news/press-releases/2022/08/ftc-sues-kochava-selling-data-tracks-people-reproductive-health-clinics-places-worship-other
+gl-019	Overseas	InMarket	精密位置情報の販売・広告利用	https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-will-ban-inmarket-selling-precise-consumer-location-data
+gl-020	Overseas	Nomi Technologies	店舗内追跡・オプトアウト説明不備	https://www.ftc.gov/news-events/news/press-releases/2015/04/retail-tracking-firm-settles-ftc-charges-it-misled-consumers-about-opt-out-choices
+gl-021	Overseas	Twitter security data used for ads	セキュリティ目的データの目的外利用	https://www.ftc.gov/news-events/news/press-releases/2022/05/ftc-charges-twitter-deceptively-using-account-security-data-sell-targeted-ads
+gl-022	Overseas	Avast browsing data sale	閲覧履歴販売・期待との乖離	https://www.ftc.gov/news-events/news/press-releases/2024/02/ftc-order-will-ban-avast-selling-browsing-data-advertising-purposes-require-it-pay-165-million-over
+gl-023	Overseas	Google Buzz	連絡先自動公開・設計不備	https://www.ftc.gov/news-events/news/press-releases/2011/10/ftc-gives-final-approval-settlement-google-over-buzz-rollout
+gl-024	Overseas	Google Street View Wi-Fi data collection	収集過剰・無線通信データ取得	https://www.streetviewsettlement.com/
+gl-025	Overseas	Amazon Alexa kids voice recordings	子どもの音声データ保持・削除不備	https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-doj-charge-amazon-violating-childrens-privacy-law-keeping-kids-alexa-voice-recordings-forever
