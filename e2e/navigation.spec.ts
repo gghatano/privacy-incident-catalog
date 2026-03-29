@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('ナビゲーション', () => {
   test('ヘッダーのナビリンクで各ページに遷移できる', async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/#/')
 
     const nav = page.locator('header nav')
 
