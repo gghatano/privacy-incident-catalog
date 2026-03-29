@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('一覧ページ', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/')
+    await page.goto('/#/')
   })
 
   test('一覧ページが表示され、事例カードが存在する', async ({ page }) => {
