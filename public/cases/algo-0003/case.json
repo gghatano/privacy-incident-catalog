@@ -1,0 +1,31 @@
+{
+  "id": "algo-0003",
+  "title": "Goldman Sachs / Apple：Apple Card信用審査における性別格差問題",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "Goldman Sachs / Apple",
+  "incident_category": ["algorithmic_discrimination"],
+  "severity": "high",
+  "occurred_at": "2019-11",
+  "summary": "2019年11月、ソフトウェア開発者のDavid Heinemeier Hanssonが、Apple Cardの与信限度額に性別格差があるとTwitterで告発した。同氏は妻よりも20倍高い与信枠を付与されたと報告し、Apple共同創業者のSteve Wozniakも同様の経験を公表した。いずれも共同納税申告を行っており、妻の方が信用スコアが高かったにもかかわらず、男性側が大幅に高い与信枠を受けていた。",
+  "impact": "SNSでの告発が大きな反響を呼び、ニューヨーク州金融サービス局（NYDFS）が正式な調査を開始した。フィンテック企業のアルゴリズムによる信用審査の不透明性とジェンダーバイアスの可能性が広く認識されるきっかけとなった。金融業界全体におけるAI与信モデルの公平性に関する議論が活発化した。",
+  "root_cause": "Apple Cardの与信審査を担当していたGoldman Sachsは、性別を審査の入力変数として使用していないと主張した。しかし、アルゴリズムが過去の信用データに基づいて訓練されている場合、歴史的な性別格差（女性の経済的自立の歴史が浅い等）が代理変数を通じて再現される可能性が指摘された。アルゴリズムの不透明性により、差別の有無を外部から検証することが困難であった。",
+  "response": "Goldman Sachsは「性別に基づく審査判断は行っていない」と否定し、審査プロセスでは性別や婚姻状況を把握していないと説明した。ニューヨーク州金融サービス局が調査を開始し、連邦法および州法に基づく差別的取扱いの有無を検証した。Goldman Sachsは調査に全面的に協力すると表明した。",
+  "lessons_learned": "アルゴリズムが性別を直接使用していなくても、歴史的データから性別格差が再現される「間接差別」のリスクが実証された。金融サービスにおけるAI与信モデルには、結果の公平性を定期的に監査する仕組みが必要である。また、アルゴリズムの説明可能性（explainability）を確保し、消費者が不利な決定の理由を理解できるようにすることが重要である。",
+  "tags": ["アルゴリズムバイアス", "性別差別", "信用審査", "フィンテック", "Apple Card", "Goldman Sachs", "間接差別", "説明可能性"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Apple Card algorithm sparks gender bias allegations against Goldman Sachs - The Washington Post",
+      "url": "https://www.washingtonpost.com/business/2019/11/11/apple-card-algorithm-sparks-gender-bias-allegations-against-goldman-sachs/"
+    },
+    {
+      "source_type": "web",
+      "title": "Apple Card is being investigated over claims it gives women lower credit limits - MIT Technology Review",
+      "url": "https://www.technologyreview.com/2019/11/11/131983/apple-card-is-being-investigated-over-claims-it-gives-women-lower-credit-limits/"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

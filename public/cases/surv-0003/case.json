@@ -1,0 +1,36 @@
+{
+  "id": "surv-0003",
+  "title": "Clearview AI：無断収集した顔画像による大規模顔認識監視システム",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Clearview AI",
+  "incident_category": ["surveillance_tracking", "privacy_violation"],
+  "severity": "critical",
+  "occurred_at": "2020-01",
+  "summary": "2020年1月、The New York Timesの報道により、Clearview AI社が構築した顔認識データベースが米国の600以上の法執行機関に提供され、令状なしの身元特定や市民の監視に利用されていたことが明らかになった。同社のシステムは写真1枚から個人を瞬時に特定可能であり、法執行機関による顔認識技術の無規制な利用が社会問題化した。本事例は、顔認識技術を用いた監視・追跡という観点から記録する（データ収集の無断性についてはunauth-0002を参照）。",
+  "impact": "法執行機関による顔認識技術の無規制な利用に対する国際的な批判が高まった。複数の都市・州で法執行目的の顔認識技術の使用を禁止または制限する条例・法案が成立した。EU議会でもAI規制法における公共空間での遠隔生体認証の制限議論が加速した。制裁・訴訟の詳細についてはunauth-0002を参照。",
+  "root_cause": "顔認識技術とウェブスクレイピング技術の進歩により、公開されたオンライン画像から大規模な生体認証データベースの構築が技術的に可能になった。しかし、顔認識技術の商業利用に対する法規制が追いついておらず、個人の同意なく生体情報を収集・利用することへの法的制約が多くの国で不十分であった。Clearview AI社は「公開情報」の収集は合法であると主張したが、各国当局はこれを認めなかった。",
+  "response": "Clearview AI社は、テロ対策や児童虐待防止など法執行目的での利用の正当性を主張した。しかし、ACLUの提訴を受け、イリノイ州での民間企業への無料アクセス提供を停止することに合意した。各国データ保護当局の制裁に対してはいくつかの上訴を行った。バーモント州等の複数の州検事総長も消費者保護法違反で提訴した。",
+  "lessons_learned": "公開情報であっても、それを生体認証データベースに変換する行為には個人の同意と法的根拠が必要であるとの認識が国際的に確立された。顔認識技術の法執行機関による利用には、厳格な規制と透明性が求められる。イリノイ州BIPAのような生体情報保護に特化した法律の有効性が実証され、他の州・国でも同様の立法が進むきっかけとなった。",
+  "tags": ["顔認識", "生体認証", "スクレイピング", "Clearview AI", "法執行", "BIPA", "GDPR", "プライバシー", "監視技術"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Clearview AI - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Clearview_AI"
+    },
+    {
+      "source_type": "web",
+      "title": "ACLU v. Clearview AI - American Civil Liberties Union",
+      "url": "https://www.aclu.org/cases/aclu-v-clearview-ai"
+    },
+    {
+      "source_type": "web",
+      "title": "Clearview AI's massive fine for GDPR violations - Barracuda Networks Blog",
+      "url": "https://blog.barracuda.com/2024/10/23/clearview-ai-fine-gdpr-violations"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

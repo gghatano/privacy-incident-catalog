@@ -1,0 +1,26 @@
+{
+  "id": "priv-0015",
+  "title": "Flo Health：生理・妊活データをFacebook・Googleに無断共有",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Flo Health, Inc.",
+  "incident_category": ["privacy_violation", "unauthorized_use"],
+  "severity": "high",
+  "occurred_at": "2021-06",
+  "summary": "女性向け生理周期・妊活トラッキングアプリ「Flo」を提供するFlo Health社が、ユーザーの生理周期、妊娠希望、排卵日などの極めてセンシティブな健康データを、Facebook、Google、AppsFlyer、Flurryなどの第三者分析・広告プラットフォームに共有していた。Flo Healthはプライバシーポリシーで健康データを第三者と共有しないと約束していたが、実際にはFacebook SDKやGoogle Analyticsを通じてこれらの情報が送信されていた。2019年のWall Street Journalの調査報道で発覚した。",
+  "impact": "世界中で1億人以上のダウンロード数を誇るアプリのユーザーの生理・妊活に関するセンシティブなデータが広告プラットフォームに共有された。FTCが2021年6月に最終命令を出し、生殖健康データの保護に関する執行の先例となった。女性の健康データの悪用リスクに対する社会的認知が高まった。",
+  "root_cause": "Flo Healthがアプリに組み込んだサードパーティSDK（Facebook SDK、Google Analytics等）が、ユーザーの健康データを自動的に収集・送信していた。プライバシーポリシーの約束と実際のデータフローが乖離しており、SDKが送信するデータの内容を十分に管理・制御していなかった。",
+  "response": "FTCは2021年1月にFlo Healthと和解し、同年6月に最終命令を発表。Flo Healthに対し、影響を受けたユーザーへの通知、今後の健康データ共有前のユーザー同意取得の義務付け、第三者に共有されたデータの削除要求を命じた。Flo Healthは「Anonymous Mode」機能を導入し、ユーザーが匿名で利用できるオプションを追加した。",
+  "lessons_learned": "サードパーティSDKが自動的に送信するデータの内容を開発者が正確に把握・制御することが重要である。生殖健康データは最もセンシティブな個人情報カテゴリに属し、その保護には最大限の注意が必要である。プライバシーポリシーの記載内容と実際のデータフローの整合性を、技術的な監査によって定期的に確認すべきである。",
+  "tags": ["Flo Health", "生理周期", "妊活", "健康データ", "Facebook SDK", "Google Analytics", "FTC", "第三者共有", "女性の健康"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "FTC Finalizes Order with Flo Health, a Fertility-Tracking App that Shared Sensitive Health Data with Facebook, Google, and Others - FTC",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2021/06/ftc-finalizes-order-flo-health-fertility-tracking-app-shared-sensitive-health-data-facebook-google"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

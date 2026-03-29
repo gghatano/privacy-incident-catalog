@@ -1,0 +1,36 @@
+{
+  "id": "algo-0002",
+  "title": "Northpointe：COMPAS再犯予測アルゴリズムの人種バイアス問題",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "Northpointe (現Equivant)",
+  "incident_category": ["algorithmic_discrimination"],
+  "severity": "high",
+  "occurred_at": "2016-05",
+  "summary": "2016年5月、ProPublicaがNorthpointe社の再犯リスク評価アルゴリズム「COMPAS」に人種バイアスが存在することを調査報道で明らかにした。分析の結果、黒人被告は白人被告に比べて再犯リスクを高く誤判定される確率が約2倍であり、逆に白人被告は低リスクと誤判定される傾向が強いことが示された。COMPASは全米の裁判所で被告の保釈・量刑判断の参考として広く利用されていた。",
+  "impact": "刑事司法におけるアルゴリズム利用の公平性に関する全米的な議論を引き起こした。COMPASは全米の裁判所で広く使用されており、人種的マイノリティに対する不当な量刑リスクが指摘された。学術界でもアルゴリズムの公平性（algorithmic fairness）に関する研究が急増するきっかけとなった。",
+  "root_cause": "COMPASアルゴリズムは人種を直接的な入力変数としていなかったが、犯罪歴・居住地域・社会経済的背景など人種と相関する代理変数（proxy variable）を通じて、構造的な人種差別を再現していた。また、「公平性」の数学的定義が複数存在し、すべてを同時に満たすことが不可能であるという根本的な問題も研究者によって指摘された。",
+  "response": "Northpointe社はProPublicaの分析手法を批判し、COMPASは人種に関わらず同等の予測精度を持つと主張した。しかし、独立した研究者により、ProPublicaが指摘したバイアスはアルゴリズムの設計上不可避であることが数学的に証明された。一部の州や自治体では再犯予測ツールの使用に関する見直しが行われた。",
+  "lessons_learned": "表面上は人種中立に見えるアルゴリズムでも、代理変数を通じて差別的結果をもたらす可能性がある。特に刑事司法のような高リスク領域では、アルゴリズムの透明性と外部監査が不可欠である。また、公平性の定義自体が文脈依存であり、技術的な解決だけでなく社会的・倫理的な合意形成が必要である。",
+  "tags": ["アルゴリズムバイアス", "人種差別", "刑事司法", "再犯予測", "COMPAS", "公平性", "代理変数", "ProPublica", "リスクアセスメント"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Machine Bias - ProPublica",
+      "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+    },
+    {
+      "source_type": "web",
+      "title": "How We Analyzed the COMPAS Recidivism Algorithm - ProPublica",
+      "url": "https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm"
+    },
+    {
+      "source_type": "web",
+      "title": "COMPAS (software) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/COMPAS_(software)"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

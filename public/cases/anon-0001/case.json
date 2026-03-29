@@ -1,0 +1,36 @@
+{
+  "id": "anon-0001",
+  "title": "NYC TLC：タクシー乗車データ1.73億件の匿名化不備による再識別",
+  "region": "国外",
+  "domain": "モビリティ",
+  "organization": "New York City Taxi and Limousine Commission（NYC TLC）",
+  "incident_category": ["inadequate_anonymization", "privacy_violation"],
+  "severity": "high",
+  "occurred_at": "2014-06",
+  "summary": "ニューヨーク市タクシー・リムジン委員会（NYC TLC）が情報公開請求に基づき公開した2013年のタクシー乗車データ（約1億7,300万件）において、運転手のメダリオン番号とハックライセンス番号の匿名化にMD5ハッシュが使用されていたが、入力値のパターンが限定的であったため、2時間以内にすべてのハッシュが逆算され、匿名化が完全に無効化された。これにより運転手の収入情報が特定可能となり、さらに有名人のゴシップ写真と照合することで乗客の行動追跡も可能であることが示された。",
+  "impact": "約1億7,300万件の乗車記録が実質的に非匿名化状態で公開された。タクシー運転手の収入・勤務パターンが特定可能となり、乗客についても乗降場所と時刻から行動パターンの推定が可能であった。有名人（Bradley Cooper、Jessica Alba等）の移動記録が特定され、チップの支払い習慣まで公開された。データの匿名化技術に関する広範な技術的・政策的議論を引き起こした。",
+  "root_cause": "MD5ハッシュを匿名化手法として使用したが、メダリオン番号やライセンス番号は桁数と形式が限定されているため、総当たり攻撃（レインボーテーブル攻撃）で容易に逆算可能であった。匿名化の技術的妥当性の検証が行われておらず、ハッシュ化と匿名化の区別が理解されていなかった。乗降地点・時刻等の準識別子の組み合わせによる再識別リスクも考慮されていなかった。",
+  "response": "NYC TLCは当該データセットの問題を認識したが、既にインターネット上に広く拡散していたため完全な回収は不可能であった。以後のデータ公開においては匿名化手法の見直しが行われた。本件はデータ匿名化の失敗事例として学術研究や政策議論で広く引用されるようになった。",
+  "lessons_learned": "ハッシュ化は匿名化ではない。入力空間が限定されている場合、ハッシュは容易に逆算される。公開データの匿名化には差分プライバシーやk-匿名性などの正式な手法を適用し、専門家によるリスク評価を事前に実施する必要がある。位置情報・時刻データは準識別子として機能するため、組み合わせによる再識別リスクを十分に考慮すべきである。",
+  "tags": ["匿名化不備", "再識別", "MD5ハッシュ", "タクシーデータ", "オープンデータ", "位置情報", "レインボーテーブル", "情報公開"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Riding with the Stars: Passenger Privacy in the NYC Taxicab Dataset",
+      "url": "https://agkn.wordpress.com/2014/09/15/riding-with-the-stars-passenger-privacy-in-the-nyc-taxicab-dataset/"
+    },
+    {
+      "source_type": "web",
+      "title": "On Taxis and Rainbow Tables: Lessons for researchers and governments from NYC's improperly anonymized taxi logs - LSE",
+      "url": "https://blogs.lse.ac.uk/impactofsocialsciences/2014/07/16/nyc-improperly-anonymized-taxi-logs-pandurangan/"
+    },
+    {
+      "source_type": "web",
+      "title": "How a Software Engineer Deanonymized Data on 173 Million NYC Taxi Trips - Route Fifty",
+      "url": "https://www.route-fifty.com/management/2014/09/how-software-engineer-deanonymized-data-173-million-nyc-taxi-trips/93320/"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

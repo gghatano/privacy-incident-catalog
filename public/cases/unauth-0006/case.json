@@ -1,0 +1,26 @@
+{
+  "id": "unauth-0006",
+  "title": "Facebook：約70万人を対象とした同意なき感情操作実験（Emotional Contagion）",
+  "region": "国外",
+  "domain": "SNS・メディア",
+  "organization": "Facebook（現Meta）／Cornell University",
+  "incident_category": ["unauthorized_use"],
+  "severity": "high",
+  "occurred_at": "2014-06",
+  "summary": "2012年1月、Facebookは約689,003人のユーザーのニュースフィードを操作し、感情の伝染（Emotional Contagion）に関する大規模心理実験を実施した。ユーザーのフィードからポジティブまたはネガティブな投稿を意図的に除外し、その後のユーザー自身の投稿における感情表現の変化を分析した。この研究はCornell大学の研究者Adam Kramerらとの共同研究として2014年6月にPNAS（米国科学アカデミー紀要）に論文として発表され、参加者への事前のインフォームドコンセントが一切なかったことが大きな社会的批判を招いた。",
+  "impact": "約70万人のユーザーが知らないうちに心理実験の対象とされた。論文発表後、学術界・メディア・一般市民から強い批判が殺到し、ソーシャルメディア企業がユーザーの感情を操作する能力と倫理観に対する深刻な懸念が広がった。英国情報コミッショナー事務局（ICO）も調査を実施。研究倫理審査の在り方について学術界全体で議論が巻き起こった。",
+  "root_cause": "Facebookの利用規約がデータの研究利用を広範に許容する文言を含んでおり、ユーザーの明示的な同意なく心理実験を実施できる状態だった。Cornell大学の倫理審査委員会（IRB）はFacebookが独自に実施した研究であるとして事前審査を省略した。プラットフォーム事業者による研究の倫理的監督体制が不十分だった。",
+  "response": "論文筆頭著者のAdam Kramerがfacebookに投稿で謝罪。Facebookは社内の研究倫理審査プロセスを強化し、ユーザーデータを用いる研究にはより厳格な審査を義務付けると発表。PNASの編集者も「倫理的懸念」に関する声明を発表した。英国ICOがFacebookに対して調査を実施した。",
+  "lessons_learned": "プラットフォーム事業者がユーザーデータを研究目的で利用する場合、利用規約の包括的同意だけでは不十分であり、実験内容に対する明示的なインフォームドコンセントが必要である。学術機関と企業の共同研究における倫理審査の責任分界を明確にし、被験者保護の基準を統一する必要がある。",
+  "tags": ["Facebook", "感情操作", "心理実験", "インフォームドコンセント", "研究倫理", "ニュースフィード", "Emotional Contagion", "PNAS"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Experimental evidence of massive-scale emotional contagion through social networks - PNAS",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.1320040111"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "algo-0004",
+  "title": "Rite Aid：AIベース顔認識システムによる有色人種・女性への誤認問題",
+  "region": "国外",
+  "domain": "小売",
+  "organization": "Rite Aid Corporation",
+  "incident_category": ["algorithmic_discrimination", "surveillance_tracking"],
+  "severity": "high",
+  "occurred_at": "2023-12",
+  "summary": "米国大手ドラッグストアチェーンRite Aidが、2012年から店舗にAIベースの顔認識監視システムを導入し、万引きの疑いがある人物を自動検知していた。しかしシステムの誤認率が高く、特に有色人種、女性、高齢者が誤って万引き犯として特定される事態が頻発した。誤認された顧客は従業員から尾行・拘束・退店命令を受けるなどの被害を受けた。FTCは、Rite Aidが合理的なセーフガードなしに不正確な顔認識技術を展開したとして提訴した。",
+  "impact": "数千人の無実の顧客が誤って万引き犯として扱われた。特に有色人種の顧客が不当に監視・拘束される差別的な影響が生じた。FTCが2023年12月にRite Aidに対して5年間の顔認識技術使用禁止命令を出した。小売業界におけるAI監視技術の利用に対する規制議論が活発化した。",
+  "root_cause": "Rite Aidが低品質の顔写真データベースと不正確な照合アルゴリズムを使用し、十分な精度検証を行わずにシステムを導入した。誤検知時の確認プロセスが不十分であり、従業員がシステムの警告をそのまま信頼して行動した。人種・性別・年齢による認識精度の格差を評価・是正する仕組みがなかった。",
+  "response": "FTCは2023年12月にRite Aidとの間で和解を成立させ、5年間にわたり顔認識技術の使用を禁止する命令を出した。Rite Aidは収集した顔認識データの削除を義務付けられ、監視技術の導入に際して包括的なセキュリティプログラムの実施も求められた。Rite Aidは2023年10月に経営破綻（Chapter 11）を申請している。",
+  "lessons_learned": "AI監視技術の導入前に精度検証を徹底し、特に人種・性別・年齢による精度格差を評価する必要がある。顔認識の誤検知に基づく行動は顧客の尊厳を深刻に侵害するため、人間による確認プロセスを必ず組み込むべきである。小売店舗での顔認識導入は差別的影響のリスクが高く、慎重なリスク評価と顧客への告知が不可欠である。",
+  "tags": ["Rite Aid", "顔認識", "AI監視", "アルゴリズムバイアス", "人種差別", "FTC", "使用禁止命令", "誤認", "小売"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Rite Aid Banned from Using AI Facial Recognition After FTC Says Retailer Deployed Technology Without Reasonable Safeguards - FTC",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without"
+    }
+  ],
+  "figures": [],
+  "review_status": "ai_generated",
+  "status": "seed"
+}
