@@ -1,5 +1,5 @@
 import type { FilterState, FilterKey } from '../../hooks/useFilter'
-import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS, INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS } from '../../constants/categories'
+import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS, INCIDENT_CATEGORY_LABELS } from '../../constants/categories'
 
 interface ActiveFilterBadgesProps {
   filters: FilterState
@@ -21,11 +21,11 @@ const VALUE_LABELS: Record<string, Record<string, string>> = {
   technology_category: TECHNOLOGY_CATEGORY_LABELS,
   review_status: REVIEW_STATUS_LABELS,
   incident_category: INCIDENT_CATEGORY_LABELS,
-  severity: SEVERITY_LABELS,
+
 }
 
 export default function ActiveFilterBadges({ filters, onToggleFilter, onClearFilters }: ActiveFilterBadgesProps) {
-  const keys: FilterKey[] = ['incident_category', 'severity', 'technology_category', 'region', 'domain', 'usecase_category', 'review_status']
+  const keys: FilterKey[] = ['incident_category', 'technology_category', 'region', 'domain', 'usecase_category', 'review_status']
   const badges: { key: FilterKey; value: string }[] = []
 
   for (const key of keys) {

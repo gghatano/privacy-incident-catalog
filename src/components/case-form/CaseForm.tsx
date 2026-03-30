@@ -7,8 +7,6 @@ import {
   DOMAIN_OPTIONS,
   INCIDENT_CATEGORY_OPTIONS,
   INCIDENT_CATEGORY_LABELS,
-  SEVERITY_OPTIONS,
-  SEVERITY_LABELS,
   REVIEW_STATUS_OPTIONS,
   REVIEW_STATUS_LABELS,
 } from '../../constants/categories'
@@ -182,28 +180,18 @@ export default function CaseForm({ defaultValues, isEdit }: CaseFormProps) {
             )}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="severity" className={labelClass}>深刻度</label>
-              <select id="severity" {...register('severity')} className={inputClass}>
-                {SEVERITY_OPTIONS.map((s) => (
-                  <option key={s} value={s}>{SEVERITY_LABELS[s]}</option>
-                ))}
-              </select>
-              {errors.severity && <p className={errorClass}>{errors.severity.message}</p>}
-            </div>
+          <input type="hidden" {...register('severity')} />
 
-            <div>
-              <label htmlFor="occurred_at" className={labelClass}>発生時期</label>
-              <input
-                id="occurred_at"
-                type="text"
-                {...register('occurred_at')}
-                className={inputClass}
-                placeholder="YYYY / YYYY-MM / YYYY-MM-DD / 空欄"
-              />
-              {errors.occurred_at && <p className={errorClass}>{errors.occurred_at.message}</p>}
-            </div>
+          <div>
+            <label htmlFor="occurred_at" className={labelClass}>発生時期</label>
+            <input
+              id="occurred_at"
+              type="text"
+              {...register('occurred_at')}
+              className={inputClass}
+              placeholder="YYYY / YYYY-MM / YYYY-MM-DD / 空欄"
+            />
+            {errors.occurred_at && <p className={errorClass}>{errors.occurred_at.message}</p>}
           </div>
         </fieldset>
 
