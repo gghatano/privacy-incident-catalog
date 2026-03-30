@@ -86,7 +86,10 @@ export default function DetailPage() {
         </Link>
       </div>
 
-      <h1 className="text-2xl font-bold mb-4">{caseData.title}</h1>
+      <div className="mb-4">
+        <p className="text-sm text-gray-500 mb-1">{caseData.id}</p>
+        <h1 className="text-2xl font-bold">{caseData.title}</h1>
+      </div>
 
       {caseData.ethical_notes && caseData.ethical_notes.length > 0 && (
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">

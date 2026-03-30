@@ -38,7 +38,6 @@ function CaseTable({ cases }: { cases: Case[] }) {
         <thead>
           <tr className="border-b-2 border-gray-200 bg-gray-50 text-left">
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">タイトル</th>
-            <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">組織</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">カテゴリ</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">深刻度</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">地域</th>
@@ -55,7 +54,6 @@ function CaseTable({ cases }: { cases: Case[] }) {
                   {c.title}
                 </Link>
               </td>
-              <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.organization}</td>
               <td className="py-2.5 px-3">
                 <div className="flex flex-wrap gap-1">
                   {c.incident_category.map((cat) => (
@@ -205,7 +203,6 @@ export default function ListPage() {
                   <ReviewStatusBadge status={c.review_status} />
                 </div>
                 <h2 className="text-base font-semibold mb-2 pr-20 line-clamp-2">{c.title}</h2>
-                <p className="text-sm text-gray-600 mb-2">{c.organization}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-2">
                   <SeverityBadge severity={c.severity} />
