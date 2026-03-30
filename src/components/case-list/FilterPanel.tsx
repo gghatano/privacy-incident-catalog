@@ -8,6 +8,8 @@ import {
   SEVERITY_LABELS,
   REGION_OPTIONS,
   DOMAIN_OPTIONS,
+  REVIEW_STATUS_OPTIONS,
+  REVIEW_STATUS_LABELS,
 } from '../../constants/categories'
 
 interface FilterPanelProps {
@@ -39,6 +41,9 @@ function countByField(cases: Case[], filterKey: FilterKey, value: string): numbe
     }
     if (filterKey === 'domain') {
       return c.domain === value
+    }
+    if (filterKey === 'review_status') {
+      return c.review_status === value
     }
     return false
   }).length
@@ -147,6 +152,15 @@ export default function FilterPanel({ filters, cases, onToggleFilter }: FilterPa
         options={DOMAIN_OPTIONS}
         labels={domainLabels}
         selectedValues={filters.domain}
+        cases={cases}
+        onToggle={onToggleFilter}
+      />
+      <FilterSection
+        title="レビュー状態"
+        filterKey="review_status"
+        options={REVIEW_STATUS_OPTIONS}
+        labels={REVIEW_STATUS_LABELS}
+        selectedValues={filters.review_status}
         cases={cases}
         onToggle={onToggleFilter}
       />

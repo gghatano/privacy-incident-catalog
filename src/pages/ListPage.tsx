@@ -8,6 +8,7 @@ import ActiveFilterBadges from '../components/case-list/ActiveFilterBadges'
 import FilterPanel from '../components/case-list/FilterPanel'
 import Pagination from '../components/case-list/Pagination'
 import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS } from '../constants/categories'
+import ReviewStatusBadge from '../components/ReviewStatusBadge'
 import type { Case, Severity } from '../types/case'
 
 const PER_PAGE_CARD = 12
@@ -42,6 +43,7 @@ function CaseTable({ cases }: { cases: Case[] }) {
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">深刻度</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">地域</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">分野</th>
+            <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">ステータス</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">発生時期</th>
           </tr>
         </thead>
@@ -66,6 +68,7 @@ function CaseTable({ cases }: { cases: Case[] }) {
               <td className="py-2.5 px-3"><SeverityBadge severity={c.severity} /></td>
               <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.region}</td>
               <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.domain}</td>
+              <td className="py-2.5 px-3"><ReviewStatusBadge status={c.review_status} /></td>
               <td className="py-2.5 px-3 text-gray-400 whitespace-nowrap">{c.occurred_at ?? '—'}</td>
             </tr>
           ))}
@@ -196,9 +199,12 @@ export default function ListPage() {
               <Link
                 key={c.id}
                 to={`cases/${c.id}`}
-                className="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow"
+                className="relative block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow"
               >
-                <h2 className="text-base font-semibold mb-2 line-clamp-2">{c.title}</h2>
+                <div className="absolute top-3 right-3">
+                  <ReviewStatusBadge status={c.review_status} />
+                </div>
+                <h2 className="text-base font-semibold mb-2 pr-20 line-clamp-2">{c.title}</h2>
                 <p className="text-sm text-gray-600 mb-2">{c.organization}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-2">

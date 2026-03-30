@@ -4,7 +4,9 @@
   "region": "国外",
   "domain": "小売",
   "organization": "Target Corporation",
-  "incident_category": ["privacy_violation"],
+  "incident_category": [
+    "privacy_violation"
+  ],
   "severity": "medium",
   "occurred_at": "2012-02",
   "summary": "米国小売大手Targetが、顧客の購買履歴データを統計分析し、妊娠の可能性を予測するアルゴリズムを開発・運用していた。無香料ローション、ビタミンサプリメント、コットンボールなどの購買パターンから妊娠スコアを算出し、妊娠関連のクーポンをターゲティング送付していた。顧客の健康状態に関するセンシティブな推測が行われ、家族が把握していない情報が先に企業に知られていた事例が報道された。",
@@ -12,12 +14,26 @@
   "root_cause": "Targetのデータサイエンスチームが購買データから妊娠を高精度で予測するモデルを構築し、本人の認知・同意なくセンシティブな健康状態を推測したうえでマーケティングに利用していた。データから推測される情報のセンシティビティに対する倫理的配慮が不足していた。",
   "response": "Targetは報道後、ターゲティングクーポンを妊娠関連以外の商品と混在させて送付するようにし、予測を目立たせない方法に変更した。ただし予測分析プログラム自体は継続された。企業としての公式な謝罪や中止は行われなかった。",
   "lessons_learned": "購買データの分析から推測できる健康状態や個人の秘密に関する情報は、センシティブな個人情報として扱う必要がある。データから推論される情報の利用にも同意取得の原則を適用すべきである。パーソナライズドマーケティングの設計において、消費者が「気味悪い」と感じる境界線を認識し、倫理的なガイドラインを策定する必要がある。",
-  "tags": ["Target", "予測分析", "妊娠予測", "購買データ", "データマイニング", "パーソナライゼーション", "マーケティング倫理", "推論プライバシー"],
+  "tags": [
+    "Target",
+    "予測分析",
+    "妊娠予測",
+    "購買データ",
+    "データマイニング",
+    "パーソナライゼーション",
+    "マーケティング倫理",
+    "推論プライバシー"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "How Target Figured Out A Teen Girl Was Pregnant Before Her Father Did - Forbes",
       "url": "https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/"
+    },
+    {
+      "source_type": "web",
+      "title": "How Target Knew a High School Girl Was Pregnant before Her Parents Did - TIME",
+      "url": "https://techland.time.com/2012/02/17/how-target-knew-a-high-school-girl-was-pregnant-before-her-parents/"
     }
   ],
   "figures": [],
