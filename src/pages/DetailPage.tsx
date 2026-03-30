@@ -88,6 +88,15 @@ export default function DetailPage() {
 
       <h1 className="text-2xl font-bold mb-4">{caseData.title}</h1>
 
+      {caseData.ethical_notes && caseData.ethical_notes.length > 0 && (
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+          <p className="text-sm font-medium text-yellow-800 mb-1">注意事項</p>
+          {caseData.ethical_notes.map((note, i) => (
+            <p key={i} className="text-sm text-yellow-700">{note}</p>
+          ))}
+        </div>
+      )}
+
       <div className="bg-white rounded-lg border border-gray-200 p-6 mb-6">
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
           <div>

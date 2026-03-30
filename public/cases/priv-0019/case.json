@@ -4,7 +4,9 @@
   "region": "国外",
   "domain": "IT",
   "organization": "Google Inc.",
-  "incident_category": ["privacy_violation"],
+  "incident_category": [
+    "privacy_violation"
+  ],
   "severity": "high",
   "occurred_at": "2010-02",
   "summary": "2010年2月、Googleが新しいソーシャルネットワーキングサービス「Google Buzz」を開始した際、Gmailユーザーの頻繁なメール連絡先を自動的にフォローリストとして公開する設計となっていた。ユーザーがBuzzを有効にすると、デフォルトでGmailの連絡先リストが他のユーザーに表示され、プライベートなコミュニケーション関係が意図せず公開された。Googleは事前に十分な同意を取得せず、オプトアウトの仕組みも不十分であった。FTCは2011年3月にGoogleとの和解を発表し、同年10月に最終承認した。",
@@ -12,12 +14,32 @@
   "root_cause": "Google Buzzは、ユーザーの利便性とサービスの迅速な立ち上げを優先し、プライバシー・バイ・デザインの原則を無視した設計であった。Gmailの連絡先情報をソーシャルネットワークのフォローリストとして自動公開するデフォルト設定は、メールとSNSという異なる文脈でのデータ利用に対するユーザーの期待を無視していた。オプトインではなくオプトアウト方式を採用し、かつオプトアウトの手順も不明確であった。",
   "response": "Googleは批判を受け、Buzzの公開後数日以内に設計を変更し、連絡先の自動公開をオプトインに変更した。2011年3月、FTCはGoogleとの和解を発表した。和解条件には、20年間にわたる包括的なプライバシープログラムの実施、独立した第三者による隔年のプライバシー監査、今後のプライバシー設定変更に対するユーザーの明示的同意の取得が含まれた。Google Buzzは2011年12月にサービスを終了した。",
   "lessons_learned": "新サービスの設計においては、プライバシー・バイ・デザインの原則を遵守し、ユーザーのデータをデフォルトで非公開とすべきである。異なるサービス間でのデータ転用は、ユーザーのコンテキストに基づく期待を裏切るリスクがある。大規模なサービス変更は段階的に導入し、ユーザーへの十分な説明と明示的な同意取得を行うべきである。この事例はFTCによる大手テック企業への包括的プライバシー規制の先例となった。",
-  "tags": ["Google Buzz", "Gmail", "連絡先公開", "プライバシー・バイ・デザイン", "FTC", "デフォルト設定", "ソーシャルネットワーク", "オプトイン", "20年和解"],
+  "tags": [
+    "Google Buzz",
+    "Gmail",
+    "連絡先公開",
+    "プライバシー・バイ・デザイン",
+    "FTC",
+    "デフォルト設定",
+    "ソーシャルネットワーク",
+    "オプトイン",
+    "20年和解"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "FTC Google Buzz和解",
       "url": "https://www.ftc.gov/news-events/news/press-releases/2011/10/ftc-gives-final-approval-settlement-google-over-buzz-rollout"
+    },
+    {
+      "source_type": "web",
+      "title": "EPIC v. FTC (Enforcement of the Google Consent Order) - Electronic Privacy Information Center",
+      "url": "https://epic.org/documents/epic-v-ftc-enforcement-of-the-google-consent-order/"
+    },
+    {
+      "source_type": "web",
+      "title": "Google Buzz - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Google_Buzz"
     }
   ],
   "figures": [],

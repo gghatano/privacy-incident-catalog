@@ -4,15 +4,28 @@
   "region": "国外",
   "domain": "SNS・メディア",
   "organization": "Facebook（現Meta）／Cambridge Analytica",
-  "incident_category": ["unauthorized_use", "privacy_violation"],
+  "incident_category": [
+    "unauthorized_use",
+    "privacy_violation"
+  ],
   "severity": "critical",
   "occurred_at": "2018-03",
   "summary": "政治コンサルティング企業Cambridge Analyticaが、研究者Aleksandr Koganが開発したアプリ「This Is Your Digital Life」を通じて、約8,700万人分のFacebookユーザーデータを不正に収集・利用した。アプリは性格診断テストを装い、利用者だけでなくその友人のデータもFacebookのOpen Graphプラットフォーム経由で取得していた。収集されたデータは心理プロファイリングに使用され、2016年の米国大統領選挙におけるターゲティング広告に活用された。",
   "impact": "約8,700万人のFacebookユーザーの個人データが不正に収集・利用された。Facebookの時価総額は数日間で1,000億ドル以上下落。2019年7月にFTCが50億ドル（約5,500億円）の制裁金を科し、プライバシー違反に対する制裁金として米国史上最高額を記録。SECにも1億ドルの和解金を支払った。Cambridge Analyticaは2018年5月に破産申請。世界的にデータプライバシー規制強化の議論が加速した。",
-  "root_cause": "FacebookのOpen Graphプラットフォームがアプリ利用者の友人のデータまで広範にアクセスを許可する設計だった。サードパーティアプリに対するデータ共有ポリシーの監督が不十分であり、研究目的で収集されたデータの商業・政治利用を防ぐ仕組みが欠如していた。2015年にポリシーを変更したものの、既に収集されたデータの回収は行われなかった。",
+  "root_cause": "FacebookのOpen Graphプラットフォームがアプリ利用者の友人のデータまで広範にアクセスを許可する設計だった。サードパーティアプリに対するデータ共有ポリシーの監督が不十分であり、研究目的で収集されたデータの商業・政治利用を防ぐ仕組みが不十分であった。2015年にポリシーを変更したものの、既に収集されたデータの回収は行われなかった。",
   "response": "Facebookは2018年3月に事件を認め、Mark Zuckerberg CEOが米国議会で証言。サードパーティアプリのデータアクセスを大幅に制限するプラットフォーム変更を実施。FTCとの和解で50億ドルを支払い、独立したプライバシー委員会の設置に合意。Cambridge Analyticaに対してもFTCが欺瞞的行為で提訴した。EU各国でもGDPR施行と関連して調査が進められた。",
   "lessons_learned": "プラットフォーム事業者はサードパーティへのデータ共有範囲を最小限に制限し、利用目的の遵守を継続的に監査する必要がある。利用者の明示的な同意なくフレンドデータを共有するAPI設計はプライバシーリスクが極めて高い。データ利用目的の制限と、違反時の技術的・契約的な執行手段の整備が不可欠である。",
-  "tags": ["Facebook", "Cambridge Analytica", "政治利用", "プロファイリング", "FTC制裁金", "データ不正利用", "同意なき収集", "SNS", "米国大統領選挙"],
+  "tags": [
+    "Facebook",
+    "Cambridge Analytica",
+    "政治利用",
+    "プロファイリング",
+    "FTC制裁金",
+    "データ不正利用",
+    "同意なき収集",
+    "SNS",
+    "米国大統領選挙"
+  ],
   "sources": [
     {
       "source_type": "web",

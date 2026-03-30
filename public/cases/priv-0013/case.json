@@ -4,7 +4,10 @@
   "region": "国外",
   "domain": "医療",
   "organization": "GoodRx Holdings, Inc.",
-  "incident_category": ["privacy_violation", "unauthorized_use"],
+  "incident_category": [
+    "privacy_violation",
+    "unauthorized_use"
+  ],
   "severity": "high",
   "occurred_at": "2023-02",
   "summary": "処方薬の価格比較・割引サービスを提供するGoodRxが、ユーザーの処方薬情報、健康状態、通院情報などのセンシティブな健康データを、Facebook（Meta）、Google、Criteoなどの広告プラットフォームに共有し、ターゲティング広告に利用していた。GoodRxはプライバシーポリシーで健康情報を広告目的で共有しないと約束していたにもかかわらず、数年間にわたりこの慣行を続けていた。FTCはHealth Breach Notification Rule違反として初の執行措置を講じた。",
@@ -12,12 +15,31 @@
   "root_cause": "GoodRxがウェブサイトおよびアプリにFacebookピクセル等の広告トラッキングツールを埋め込み、ユーザーの処方薬検索・購入データを自動的に広告プラットフォームに送信していた。プライバシーポリシーの記載と実際のデータ取り扱いが乖離していた。HIPAAの適用対象外であることを利用し、健康データの保護が不十分であった。",
   "response": "FTCは2023年2月にGoodRxに対して執行措置を発表。150万ドルの制裁金を科し、健康データの広告利用を恒久的に禁止。影響を受けたユーザーへの通知を義務付けた。GoodRxは広告トラッキングツールの使用を見直し、プライバシー慣行の改善に合意した。",
   "lessons_learned": "HIPAA適用対象外のヘルステック企業であっても、FTCのHealth Breach Notification Ruleに基づく執行を受ける可能性がある。ウェブサイトやアプリに組み込む広告トラッキングツールが送信するデータの内容を正確に把握し、センシティブ情報の意図しない共有を防ぐ必要がある。プライバシーポリシーの記載と実際のデータ取り扱いの一致を定期的に監査すべきである。",
-  "tags": ["GoodRx", "処方薬データ", "健康情報", "広告共有", "FTC", "Health Breach Notification Rule", "Facebookピクセル", "ヘルステック"],
+  "tags": [
+    "GoodRx",
+    "処方薬データ",
+    "健康情報",
+    "広告共有",
+    "FTC",
+    "Health Breach Notification Rule",
+    "Facebookピクセル",
+    "ヘルステック"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "FTC Enforcement Action to Bar GoodRx from Sharing Consumers' Sensitive Health Info for Advertising - FTC",
       "url": "https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising"
+    },
+    {
+      "source_type": "web",
+      "title": "GoodRx to be barred from sharing health data for ads under proposed FTC settlement - CNBC",
+      "url": "https://www.cnbc.com/2023/02/01/goodrx-barred-from-sharing-health-data-under-proposed-ftc-settlement.html"
+    },
+    {
+      "source_type": "web",
+      "title": "FTC slaps GoodRx with $1.5M fine for sharing users' health data with Facebook, Google - Fierce Healthcare",
+      "url": "https://www.fiercehealthcare.com/regulatory/ftc-slaps-goodrx-fine-under-health-breach-notification-rule"
     }
   ],
   "figures": [],

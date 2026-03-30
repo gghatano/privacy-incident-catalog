@@ -4,20 +4,43 @@
   "region": "国外",
   "domain": "医療",
   "organization": "NHS Digital / NHS England",
-  "incident_category": ["privacy_violation"],
-  "severity": "high",
+  "incident_category": [
+    "privacy_violation"
+  ],
+  "severity": "medium",
   "occurred_at": "2021-05",
   "summary": "2021年5月、NHS Digitalはイングランドの全GP（かかりつけ医）から患者データを一括収集するGPDPR（General Practice Data for Planning and Research）計画を発表した。約5,500万人の患者のGP診療記録（既往歴、診断、処方、紹介状等）を中央データベースに集約し、研究・計画目的で第三者に提供する計画であった。しかし、患者への告知が不十分であり、多くの患者はデータ収集が予定されていることを知らなかった。オプトアウト手続きの複雑さや、データの匿名化レベル、第三者への提供範囲に対する懸念が医療専門家や市民団体から噴出した。",
   "impact": "イングランドの約5,500万人の患者の診療データが影響を受ける可能性があった。医療専門家、市民団体、プライバシー擁護団体から強い反対の声が上がり、GPDPR計画は2021年9月に無期限延期に追い込まれた。患者のNHSに対する信頼が損なわれ、医療データの二次利用に対する社会的な議論が活発化した。オプトアウト登録が急増し、医療データの活用と患者のプライバシーのバランスが問われた。",
   "root_cause": "NHS Digitalは患者への告知を十分に行わず、データ収集の開始予定日までに国民の理解を得る努力が不足していた。オプトアウトの手続き（Type 1 Opt-out）が煩雑で、GP窓口での申請が必要であった。データの匿名化レベルや再特定リスクについての説明が不透明であり、第三者（製薬会社、民間企業等）へのデータ提供に対する患者の懸念に対処していなかった。患者参加とインフォームドコンセントの原則が軽視された計画設計であった。",
   "response": "医療専門家や市民団体からの強い批判を受け、NHS Digitalは当初2021年7月に予定していたデータ収集を2021年9月まで延期し、患者への告知キャンペーンを追加実施した。しかし、なお十分な理解が得られないとして、2021年9月にGPDPR計画を無期限に延期した。その後、データの信頼性あるリサーチ環境（Trusted Research Environment）での利用など、より安全なデータ活用の枠組みが検討された。NHS Digitalは2023年にNHS Englandに統合された。",
   "lessons_learned": "大規模な医療データの二次利用計画は、患者の信頼と社会的合意を前提として進めなければならない。データ収集に先立つ十分な患者告知、理解しやすいオプトアウト手続き、データの利用範囲に関する透明性が不可欠である。医療データは最もセンシティブな個人情報の一つであり、研究・計画目的であっても包括的なデータガバナンスと患者参加の仕組みが求められる。一方的なデータ収集計画は社会的反発を招き、かえって医療データ活用を後退させるリスクがある。",
-  "tags": ["NHS", "GPDPR", "医療データ", "GP診療記録", "オプトアウト", "英国", "患者同意", "データ二次利用", "信頼", "公衆衛生"],
+  "tags": [
+    "NHS",
+    "GPDPR",
+    "医療データ",
+    "GP診療記録",
+    "オプトアウト",
+    "英国",
+    "患者同意",
+    "データ二次利用",
+    "信頼",
+    "公衆衛生"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "NHS GP data sharing controversy",
       "url": "https://evalian.co.uk/nhs-gp-data-sharing-controversy/"
+    },
+    {
+      "source_type": "web",
+      "title": "Concerns over England's new system for collecting general practitioner data - The Lancet Digital Health",
+      "url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(21)00148-5/fulltext"
+    },
+    {
+      "source_type": "web",
+      "title": "NHS plan to share GP patient data postponed - but will new measures address concerns? - The Conversation",
+      "url": "https://theconversation.com/nhs-plan-to-share-gp-patient-data-postponed-but-will-new-measures-address-concerns-165103"
     }
   ],
   "figures": [],

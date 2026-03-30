@@ -4,7 +4,10 @@
   "region": "国外",
   "domain": "SNS・メディア",
   "organization": "Facebook（現Meta）",
-  "incident_category": ["privacy_violation", "surveillance_tracking"],
+  "incident_category": [
+    "privacy_violation",
+    "surveillance_tracking"
+  ],
   "severity": "critical",
   "occurred_at": "2015",
   "summary": "Facebookが写真のタグ付け提案機能において、ユーザーの顔の生体情報（フェイスプリント）を事前の明示的同意なく収集・利用していた問題。イリノイ州の生体情報プライバシー法（BIPA）に違反するとして集団訴訟が提起された。BIPAは生体情報の収集前に書面による同意を義務付けており、Facebookはこの要件を満たしていなかった。",
@@ -12,12 +15,32 @@
   "root_cause": "Facebookが顔認識技術を利用したタグ付け提案機能をデフォルトで有効にし、ユーザーの顔の生体テンプレートを同意なく作成・保存していた。イリノイ州BIPAが求める事前の書面による同意取得プロセスを実装していなかった。生体情報の取り扱いに関する各州法への対応が不十分だった。",
   "response": "2019年に連邦裁判所が集団訴訟の継続を認める判決を下した。Facebookは2020年に6億5,000万ドルの和解に合意。2021年にFacebookは顔認識機能を廃止し、10億人以上のユーザーのフェイスプリントデータを削除すると発表した。Meta移行後も生体情報の取り扱いに関する規制対応を強化した。",
   "lessons_learned": "生体情報は一度漏洩すると変更不可能であり、取り扱いには最も厳格な同意取得が必要である。各地域の生体情報保護法（BIPA等）を事前に精査し、機能設計段階からプライバシー・バイ・デザインを徹底する必要がある。デフォルトでオプトインとする設計が不可欠である。",
-  "tags": ["Facebook", "顔認識", "BIPA", "生体情報", "集団訴訟", "イリノイ州", "和解金", "タグ付け", "オプトアウト"],
+  "tags": [
+    "Facebook",
+    "顔認識",
+    "BIPA",
+    "生体情報",
+    "集団訴訟",
+    "イリノイ州",
+    "和解金",
+    "タグ付け",
+    "オプトアウト"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "Federal Court Rules Facebook Users Can Sue Company Over Unlawful Use of Face Recognition - ACLU",
       "url": "https://www.aclu.org/press-releases/federal-court-rules-facebook-users-can-sue-company-over-unlawful-use-face-recognition"
+    },
+    {
+      "source_type": "web",
+      "title": "Facebook will pay $650 million to settle class action suit centered on Illinois privacy law - TechCrunch",
+      "url": "https://techcrunch.com/2021/03/01/facebook-illinois-class-action-bipa/"
+    },
+    {
+      "source_type": "web",
+      "title": "Historic Biometric Privacy Suit Settles for $650 Million - American Bar Association",
+      "url": "https://www.americanbar.org/groups/business_law/resources/business-law-today/2021-february/historic-biometric-privacy-settlement/"
     }
   ],
   "figures": [],
