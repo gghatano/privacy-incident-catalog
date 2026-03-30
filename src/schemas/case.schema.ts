@@ -72,6 +72,17 @@ export const caseSchema = z.object({
   editorial_notes: z.array(z.string()).optional(),
   created_at: z.string().optional(),
   updated_at: z.string().optional(),
+  country: z.string().optional(),
+  affected_count: z.number().optional(),
+  related_laws: z.array(z.string()).optional(),
+  penalty_amount: z.object({
+    amount: z.number(),
+    currency: z.string(),
+    authority: z.string(),
+  }).nullable().optional(),
+  discovered_at: z.string().optional(),
+  related_cases: z.array(z.string()).optional(),
+  ethical_notes: z.array(z.string()).optional(),
 })
 
 export type CaseFormData = z.infer<typeof caseSchema>

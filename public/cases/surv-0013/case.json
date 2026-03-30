@@ -4,20 +4,36 @@
   "region": "国外",
   "domain": "小売",
   "organization": "Nomi Technologies, Inc.",
-  "incident_category": ["surveillance_tracking"],
+  "incident_category": [
+    "surveillance_tracking"
+  ],
   "severity": "medium",
   "occurred_at": "2013",
   "summary": "小売店舗向けトラッキングサービスを提供するNomi Technologiesが、店舗内での消費者の行動をモバイル端末のWi-Fi信号を利用して追跡していたことについて、FTCが措置を講じた。Nomiは顧客企業の店舗を訪れる消費者のスマートフォンからWi-Fi信号を検出し、来店頻度や店内滞在時間、移動パターンなどを分析するサービスを提供していた。同社はプライバシーポリシーでオプトアウトの選択肢を提供すると約束していたが、実際には店頭でのオプトアウト告知を行わず、消費者は追跡されていることすら知ることができなかった。",
   "impact": "少なくとも9つの小売店舗で数千人規模の消費者が、知らないうちにWi-Fi信号を通じて追跡された。消費者にはオプトアウトの機会が与えられず、店舗内での行動パターンが同意なく収集・分析された。この事例は、リテールトラッキング技術の透明性とプライバシーに対する懸念を顕在化させた。",
-  "root_cause": "Nomiはプライバシーポリシーで店頭告知によるオプトアウトの提供を約束していたが、実際には顧客企業の店舗にオプトアウト告知を掲示させることを怠った。約束と実際の運用の乖離が根本原因であった。また、消費者のモバイル端末のWi-Fi信号を利用した追跡について、そもそも消費者が認識できる仕組みがなく、インフォームドコンセントの概念が欠如していた。",
+  "root_cause": "Nomiはプライバシーポリシーで店頭告知によるオプトアウトの提供を約束していたが、実際には顧客企業の店舗にオプトアウト告知を掲示させることを怠った。約束と実際の運用の乖離が根本原因であった。また、消費者のモバイル端末のWi-Fi信号を利用した追跡について、そもそも消費者が認識できる仕組みがなく、インフォームドコンセントの概念が不十分であった。",
   "response": "FTCは2015年4月、Nomi Technologiesとの和解を発表した。和解条件として、同社は今後プライバシーポリシーの約束を遵守し、消費者にオプトアウトの機会を適切に提供することが求められた。また、追跡サービスの利用について消費者に明確に告知する義務が課された。制裁金は課されなかったが、今後の違反に対しては最大で1件あたり16,000ドルの民事制裁金が適用される可能性が示された。",
   "lessons_learned": "リテールトラッキング技術を導入する際は、消費者への透明性の確保とオプトアウトの実効性が不可欠である。プライバシーポリシーの約束は実際の運用に反映されなければならず、約束と実態の乖離はFTC法第5条の欺瞞的行為に該当する。Wi-Fi追跡などの受動的な追跡技術は、消費者の認知なく行われるため、より積極的な告知と同意取得の仕組みが必要である。",
-  "tags": ["Nomi Technologies", "Wi-Fi追跡", "リテールトラッキング", "オプトアウト", "FTC", "店舗内追跡", "プライバシーポリシー", "位置追跡"],
+  "tags": [
+    "Nomi Technologies",
+    "Wi-Fi追跡",
+    "リテールトラッキング",
+    "オプトアウト",
+    "FTC",
+    "店舗内追跡",
+    "プライバシーポリシー",
+    "位置追跡"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "FTC Nomi Technologies和解",
       "url": "https://www.ftc.gov/news-events/news/press-releases/2015/04/retail-tracking-firm-settles-ftc-charges-it-misled-consumers-about-opt-out-choices"
+    },
+    {
+      "source_type": "web",
+      "title": "FTC Approves Final Order In Nomi Technologies Case",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2015/09/ftc-approves-final-order-nomi-technologies-case"
     }
   ],
   "figures": [],

@@ -1,11 +1,13 @@
 import { useMemo } from 'react'
-import type { Case, IncidentCategory, Severity } from '../../types/case'
+import type { Case, IncidentCategory, Severity, ReviewStatus } from '../../types/case'
 import type { FilterKey, FilterState } from '../../hooks/useFilter'
 import {
   INCIDENT_CATEGORY_OPTIONS,
   INCIDENT_CATEGORY_LABELS,
   SEVERITY_OPTIONS,
   SEVERITY_LABELS,
+  REVIEW_STATUS_OPTIONS,
+  REVIEW_STATUS_LABELS,
 } from '../../constants/categories'
 
 interface SummaryDashboardProps {
@@ -33,6 +35,13 @@ const SEVERITY_COLORS: Record<Severity, string> = {
   high: 'bg-orange-500',
   medium: 'bg-yellow-500',
   low: 'bg-green-500',
+}
+
+const REVIEW_STATUS_COLORS: Record<ReviewStatus, string> = {
+  ai_generated: 'bg-gray-500',
+  under_review: 'bg-yellow-500',
+  human_reviewed: 'bg-green-500',
+  flagged: 'bg-red-500',
 }
 
 function StackedBar({
@@ -104,6 +113,7 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
     const regionMap: Record<string, number> = {}
     const categoryMap: Record<string, number> = {}
     const severityMap: Record<string, number> = {}
+    const reviewStatusMap: Record<string, number> = {}
 
     for (const c of cases) {
       regionMap[c.region] = (regionMap[c.region] ?? 0) + 1
@@ -111,9 +121,10 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
         categoryMap[cat] = (categoryMap[cat] ?? 0) + 1
       }
       severityMap[c.severity] = (severityMap[c.severity] ?? 0) + 1
+      reviewStatusMap[c.review_status] = (reviewStatusMap[c.review_status] ?? 0) + 1
     }
 
-    return { regionMap, categoryMap, severityMap }
+    return { regionMap, categoryMap, severityMap, reviewStatusMap }
   }, [cases])
 
   const total = cases.length
@@ -134,6 +145,12 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
     value: sev,
     count: stats.severityMap[sev] ?? 0,
     color: SEVERITY_COLORS[sev],
+  }))
+
+  const reviewStatusSegments = REVIEW_STATUS_OPTIONS.map((rs) => ({
+    value: rs,
+    count: stats.reviewStatusMap[rs] ?? 0,
+    color: REVIEW_STATUS_COLORS[rs],
   }))
 
   if (total === 0) return null
@@ -166,6 +183,30 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
               />
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Row 1.5: Review Status (next to region) */}
+      <div className="space-y-1">
+        <p className="text-xs font-medium text-gray-500">レビューステータス別</p>
+        <StackedBar
+          segments={reviewStatusSegments}
+          total={total}
+          filterKey="review_status"
+          activeValues={filters.review_status}
+          onToggle={onToggleFilter}
+        />
+        <div className="flex flex-wrap gap-x-3 gap-y-1">
+          {reviewStatusSegments.map((seg) => (
+            <LegendItem
+              key={seg.value}
+              color={seg.color}
+              label={REVIEW_STATUS_LABELS[seg.value as ReviewStatus]}
+              count={seg.count}
+              isActive={filters.review_status.includes(seg.value)}
+              onClick={() => onToggleFilter('review_status', seg.value)}
+            />
+          ))}
         </div>
       </div>
 

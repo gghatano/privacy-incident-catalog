@@ -93,4 +93,15 @@ export interface Case {
   editorial_notes?: string[]
   created_at?: string
   updated_at?: string
+  country?: string
+  affected_count?: number
+  related_laws?: string[]
+  penalty_amount?: {
+    amount: number
+    currency: string
+    authority: string
+  } | null
+  discovered_at?: string
+  related_cases?: string[]
+  ethical_notes?: string[]
 }

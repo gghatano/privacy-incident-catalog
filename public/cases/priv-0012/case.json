@@ -4,20 +4,39 @@
   "region": "国外",
   "domain": "医療",
   "organization": "Google DeepMind／Royal Free London NHS Foundation Trust",
-  "incident_category": ["privacy_violation", "unauthorized_use"],
-  "severity": "critical",
+  "incident_category": [
+    "privacy_violation",
+    "unauthorized_use"
+  ],
+  "severity": "high",
   "occurred_at": "2017-07",
-  "summary": "Google傘下のDeepMindが、ロンドンのRoyal Free London NHS Foundation Trustから約160万人分の患者の医療記録を取得し、急性腎障害（AKI）の早期検知アプリ「Streams」の開発に利用した。データには、HIV感染状況、薬物過量摂取歴、中絶記録などの極めてセンシティブな情報が含まれていた。患者への通知や同意取得は行われておらず、データ共有の法的根拠も不十分であった。",
+  "summary": "Google傘下のDeepMindが、ロンドンのRoyal Free London NHS Foundation Trustから約160万人分の患者の医療記録を取得し、急性腎障害（AKI）の早期検知アプリ「Streams」の開発に利用した。データには、極めてセンシティブな医療記録（特別カテゴリーデータに該当する情報を含む）が含まれていた。患者への通知や同意取得は行われておらず、データ共有の法的根拠も不十分であった。",
   "impact": "約160万人の患者の詳細な医療記録がDeepMindに共有された。2017年7月、英国情報コミッショナー事務局（ICO）がRoyal Free NHSトラストに対してデータ保護法違反を認定。医療AIの開発における患者データの取り扱いに関する国際的な議論を引き起こした。",
   "root_cause": "Royal Free NHSトラストがDeepMindとのデータ共有について、データ保護影響評価を適切に実施せず、患者への透明性を確保しなかった。「直接ケア」を法的根拠としたが、AI開発を含む広範なデータ利用はその範囲を超えていた。DeepMind側もデータの利用範囲について十分な説明責任を果たさなかった。",
   "response": "2017年7月、ICOがRoyal Free NHSトラストに対してデータ保護法違反の裁定を下した。Royal Freeは改善措置に合意。DeepMindは独立した第三者レビューパネルを設置し、データ利用の透明性向上を図った。その後、Streamsアプリは2019年にGoogle Healthに移管され、DeepMindの独立レビューパネルは廃止された。2022年には患者による集団訴訟も提起された。",
   "lessons_learned": "医療AIの開発においては、技術的な有用性だけでなく、患者の同意とデータ保護の法的根拠を厳格に確認する必要がある。NHS等の公的医療機関がテック企業とデータを共有する際には、データ保護影響評価（DPIA）の実施と患者への透明性確保が不可欠である。",
-  "tags": ["DeepMind", "Google", "NHS", "Royal Free", "医療AI", "ICO", "データ保護法", "患者データ", "Streams", "急性腎障害"],
+  "tags": [
+    "DeepMind",
+    "Google",
+    "NHS",
+    "Royal Free",
+    "医療AI",
+    "ICO",
+    "データ保護法",
+    "患者データ",
+    "Streams",
+    "急性腎障害"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "Google DeepMind and class action lawsuit - ICO",
       "url": "https://ico.org.uk/for-the-public/ico-40/google-deepmind-and-class-action-lawsuit/"
+    },
+    {
+      "source_type": "web",
+      "title": "Google's DeepMind made illegal deal with NHS for health data, ICO says - CNBC",
+      "url": "https://www.cnbc.com/2017/07/03/google-deepmind-nhs-deal-health-data-illegal-ico-says.html"
     }
   ],
   "figures": [],

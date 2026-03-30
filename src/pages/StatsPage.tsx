@@ -1,6 +1,6 @@
 import { useCases } from '../context/useCases'
-import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS } from '../constants/categories'
-import type { IncidentCategory, Severity } from '../types/case'
+import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
+import type { IncidentCategory, Severity, ReviewStatus } from '../types/case'
 
 function countBy<T>(items: T[], keyFn: (item: T) => string | string[]): Record<string, number> {
   const counts: Record<string, number> = {}
@@ -33,6 +33,13 @@ const SEVERITY_COLORS: Record<Severity, string> = {
 const REGION_COLORS: Record<string, string> = {
   '国内': 'bg-blue-400',
   '国外': 'bg-orange-400',
+}
+
+const REVIEW_STATUS_COLORS: Record<ReviewStatus, string> = {
+  ai_generated: 'bg-gray-400',
+  under_review: 'bg-yellow-400',
+  human_reviewed: 'bg-green-400',
+  flagged: 'bg-red-400',
 }
 
 interface StatsEntry {
@@ -146,6 +153,7 @@ export default function StatsPage() {
   const byRegion = countBy(cases, (c) => c.region)
   const byDomain = countBy(cases, (c) => c.domain)
   const byYear = countBy(cases, (c) => extractYear(c.occurred_at))
+  const byReviewStatus = countBy(cases, (c) => c.review_status)
 
   return (
     <div>
@@ -177,6 +185,12 @@ export default function StatsPage() {
         <StatsSection
           title="ドメイン別"
           data={byDomain}
+        />
+        <StatsSection
+          title="レビューステータス別"
+          data={byReviewStatus}
+          labels={REVIEW_STATUS_LABELS as Record<string, string>}
+          colors={REVIEW_STATUS_COLORS}
         />
         <StatsSection
           title="年別"

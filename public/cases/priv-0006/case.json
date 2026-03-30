@@ -4,7 +4,10 @@
   "region": "国内",
   "domain": "エネルギー",
   "organization": "ENEOSホールディングス株式会社",
-  "incident_category": ["privacy_violation", "data_breach"],
+  "incident_category": [
+    "privacy_violation",
+    "data_breach"
+  ],
   "severity": "low",
   "occurred_at": "2023-03",
   "summary": "2023年3月頃、ENEOSのガソリンスタンド従業員が、顧客のクレジットカード情報が記載されたレシート画像をSNSに投稿していたことが発覚し、問題となった。レシートにはカード番号の一部や顧客名が含まれており、個人情報の不適切な取り扱いとして批判を受けた。",
@@ -12,12 +15,30 @@
   "root_cause": "従業員の個人情報保護に対する意識の不足。顧客情報を含む書類の取り扱いに関する従業員教育が不十分であった。SNSへの投稿に関するガイドラインの整備・周知も不足していた。",
   "response": "ENEOS側は事実確認後に謝罪し、当該従業員への処分を行った。再発防止策として従業員への個人情報保護教育の強化やSNS利用に関するガイドラインの見直しを実施した。",
   "lessons_learned": "従業員による顧客情報の不適切な取り扱いは、内部統制や教育の不備から生じる。個人情報を含む書類の写真撮影やSNS投稿の禁止を明確にルール化し、定期的な研修で周知徹底する必要がある。アルバイト・パート社員を含む全従業員への教育が重要である。",
-  "tags": ["ENEOS", "レシート", "SNS投稿", "従業員", "クレジットカード", "個人情報漏洩", "内部統制"],
+  "tags": [
+    "ENEOS",
+    "レシート",
+    "SNS投稿",
+    "従業員",
+    "クレジットカード",
+    "個人情報漏洩",
+    "内部統制"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "ENEOSレシート投稿",
       "url": "https://nlab.itmedia.co.jp/nl/articles/2303/02/news154.html"
+    },
+    {
+      "source_type": "web",
+      "title": "「庵野秀明来てやばい」署名入りレシート晒しは「個人情報保護法違反」になる？ - 弁護士ドットコムニュース",
+      "url": "https://www.bengo4.com/c_18/n_16102/"
+    },
+    {
+      "source_type": "web",
+      "title": "「庵野秀明来てやばい」エネオス店員が署名入りレシートを投稿し「情報漏洩」と波紋…会社は「許される行為ではない」と謝罪 - 女性自身",
+      "url": "https://woman.excite.co.jp/article/lifestyle/rid_Jisin_2210311/"
     }
   ],
   "figures": [],

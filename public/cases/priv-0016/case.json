@@ -4,7 +4,10 @@
   "region": "国外",
   "domain": "医療",
   "organization": "Easy Healthcare Corporation (Premom)",
-  "incident_category": ["privacy_violation", "unauthorized_use"],
+  "incident_category": [
+    "privacy_violation",
+    "unauthorized_use"
+  ],
   "severity": "high",
   "occurred_at": "2020",
   "summary": "排卵・妊活トラッキングアプリPremomの開発元Easy Healthcare Corporationが、ユーザーの健康データをAppsFlyer、Google、その他の第三者に広告目的で共有していたことが判明した。共有されたデータには、排卵日の検査結果、妊娠の有無、生理周期などのセンシティブな健康情報が含まれていた。同社はプライバシーポリシーで健康データを第三者と共有しないと約束していたにもかかわらず、ユーザーの同意なくデータを広告パートナーに提供していた。2023年5月、FTCは同社に対し健康データの広告目的共有を禁止する命令を提案した。",
@@ -12,12 +15,32 @@
   "root_cause": "同社はプライバシーポリシーで健康データを共有しないと明記していたにもかかわらず、実際にはSDKを通じて広告パートナーにデータを送信していた。健康データの商業利用に関する企業倫理の欠如と、プライバシーポリシーと実際のデータ処理の乖離が根本原因であった。また、健康アプリに対する規制の不十分さも問題を助長した。",
   "response": "FTCは2023年5月、Easy Healthcare Corporationに対し、健康データの広告目的での共有を恒久的に禁止する命令を提案した。同社はまた、過去に不適切に共有されたデータの削除を求められた。さらに、ユーザーに対する健康データの取り扱いに関する透明性の確保と、包括的なプライバシープログラムの実施が命じられた。",
   "lessons_learned": "健康・妊活アプリなどセンシティブなデータを扱うサービスでは、プライバシーポリシーの約束と実際のデータ処理を一致させることが不可欠である。SDK経由の第三者データ共有は見落とされがちだが、厳格な管理が必要である。規制当局はヘルスケアアプリのデータ保護に対する監視を強化しており、企業は健康データの取り扱いに最大限の注意を払うべきである。",
-  "tags": ["Premom", "排卵トラッキング", "妊活アプリ", "健康データ", "FTC", "広告利用", "SDK", "プライバシーポリシー違反", "ヘルスケア"],
+  "tags": [
+    "Premom",
+    "排卵トラッキング",
+    "妊活アプリ",
+    "健康データ",
+    "FTC",
+    "広告利用",
+    "SDK",
+    "プライバシーポリシー違反",
+    "ヘルスケア"
+  ],
   "sources": [
     {
       "source_type": "web",
       "title": "FTC Premom健康データ共有禁止命令",
       "url": "https://www.ftc.gov/news-events/news/press-releases/2023/05/ovulation-tracking-app-premom-will-be-barred-sharing-health-data-advertising-under-proposed-ftc"
+    },
+    {
+      "source_type": "web",
+      "title": "Premom fertility app shared sensitive data with Chinese analytics firms, FTC says - TechCrunch",
+      "url": "https://techcrunch.com/2023/05/18/ftc-premom-fertility-tracking-shared-data-google/"
+    },
+    {
+      "source_type": "web",
+      "title": "Fertility app Premom shared users' health data without consent, FTC says - MobiHealthNews",
+      "url": "https://www.mobihealthnews.com/news/fertility-app-premom-shared-users-health-data-without-consent-ftc-says"
     }
   ],
   "figures": [],
