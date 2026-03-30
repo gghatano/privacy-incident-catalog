@@ -1,6 +1,6 @@
 {
   "id": "priv-0007",
-  "title": "TSUTAYA：従業員が著名人の来店情報や個人情報をSNSで示唆投稿",
+  "title": "【未レビュー】従業員が著名人の来店情報や個人情報をSNSで示唆投稿",
   "region": "国内",
   "domain": "小売",
   "organization": "カルチュア・コンビニエンス・クラブ株式会社（TSUTAYA）",
@@ -28,11 +28,6 @@
   "sources": [
     {
       "source_type": "web",
-      "title": "TSUTAYA顧客情報示唆",
-      "url": "https://nlab.itmedia.co.jp/nl/articles/2112/07/news160.html"
-    },
-    {
-      "source_type": "web",
       "title": "TSUTAYAバイト、客の「BTSへの悪口」聞き「名前から性癖まで暴露可能だ」 ツイッター炎上→会社が謝罪 - J-CASTニュース",
       "url": "https://www.j-cast.com/2018/11/15343818.html?p=all"
     },
@@ -40,6 +35,11 @@
       "source_type": "web",
       "title": "ＴＳＵＴＡＹＡ、客情報流出なしと報告…ＢＴＳ悪口にキレた女性店員のＳＮＳ問題 - デイリースポーツ",
       "url": "https://www.daily.co.jp/gossip/2018/11/17/0011828729.shtml"
+    },
+    {
+      "source_type": "web",
+      "title": "TSUTAYAバイト、客の情報「暴露可能」投稿で炎上→会社が謝罪 - J-CASTニュース",
+      "url": "https://www.j-cast.com/2021/12/07426035.html"
     }
   ],
   "figures": [],

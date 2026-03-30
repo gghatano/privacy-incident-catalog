@@ -1,10 +1,13 @@
 {
   "id": "surv-0001",
-  "title": "NSA：PRISMプログラムによる大規模インターネット通信監視の発覚",
+  "title": "【未レビュー】PRISMプログラムによる大規模インターネット通信監視の発覚",
   "region": "国外",
   "domain": "公共",
   "organization": "米国国家安全保障局（NSA）",
-  "incident_category": ["surveillance_tracking", "privacy_violation"],
+  "incident_category": [
+    "surveillance_tracking",
+    "privacy_violation"
+  ],
   "severity": "critical",
   "occurred_at": "2013-06",
   "summary": "2013年6月、元NSA契約職員のEdward Snowdenが、NSAの大規模インターネット監視プログラム「PRISM」の存在を内部告発した。PRISMは2007年から運用されており、FISA改正法第702条に基づき、Google、Facebook、Apple、Microsoft等の主要インターネット企業からユーザーの通信データを収集していた。Snowdenは数千件の機密文書をジャーナリストに提供し、The GuardianおよびThe Washington Postが報道した。",
@@ -12,7 +15,17 @@
   "root_cause": "2001年の同時多発テロ以降、安全保障を名目としたインターネット通信の大規模収集が法的枠組み（FISA改正法）のもとで拡大した。外国情報活動監視裁判所（FISC）による秘密裁判での承認手続きが形骸化し、議会および市民による監視が事実上機能していなかった。テクノロジー企業も政府要請への協力を余儀なくされる法的構造が存在した。",
   "response": "Snowdenは米国政府にスパイ活動法違反で起訴され、ロシアに亡命した。米国政府は当初プログラムの正当性を主張したが、社会的批判を受けて2015年にUSA Freedom Actを制定し、NSAの一括電話記録収集を制限した。テクノロジー企業各社も通信の暗号化強化や政府要請に関する透明性レポートの公開を開始した。",
   "lessons_learned": "国家安全保障を理由とした監視活動であっても、民主的統制と透明性の確保が不可欠であることが示された。秘密裁判所による監視だけでは十分なチェック機能を果たせず、独立した監視機関と定期的な公開レビューが必要である。また、テクノロジー企業がユーザーデータの保護と政府要請への対応を両立させるための制度設計の重要性が認識された。",
-  "tags": ["大規模監視", "NSA", "PRISM", "Snowden", "内部告発", "通信傍受", "プライバシー", "国家安全保障", "FISA"],
+  "tags": [
+    "大規模監視",
+    "NSA",
+    "PRISM",
+    "Snowden",
+    "内部告発",
+    "通信傍受",
+    "プライバシー",
+    "国家安全保障",
+    "FISA"
+  ],
   "sources": [
     {
       "source_type": "web",
