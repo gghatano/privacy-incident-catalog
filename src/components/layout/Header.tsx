@@ -8,7 +8,7 @@ export default function Header() {
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link to="/" className="text-lg font-bold text-gray-900 hover:text-blue-700">
-          プライバシー事例カタログ
+          データ活用・プライバシー炎上事例カタログ
         </Link>
 
         {/* Desktop nav */}
