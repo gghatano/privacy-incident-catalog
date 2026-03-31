@@ -1,6 +1,6 @@
 {
   "id": "surv-0004",
-  "title": "【未レビュー】利用者の位置情報を無断で外部サーバーに送信",
+  "title": "利用者の位置情報を無断で外部サーバーに送信",
   "region": "国内",
   "domain": "IT",
   "organization": "アララ株式会社（QRコードリーダーQ）",
@@ -37,8 +37,8 @@
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }

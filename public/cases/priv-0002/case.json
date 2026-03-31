@@ -1,6 +1,6 @@
 {
   "id": "priv-0002",
-  "title": "【未レビュー】リクナビ内定辞退率予測データの無断販売問題",
+  "title": "リクナビ内定辞退率予測データの無断販売問題",
   "region": "国内",
   "domain": "IT",
   "organization": "株式会社リクルートキャリア",
@@ -54,8 +54,8 @@
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }

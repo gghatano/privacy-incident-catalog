@@ -1,6 +1,6 @@
 {
   "id": "surv-0010",
-  "title": "【未レビュー】人流解析によるプライバシー懸念",
+  "title": "人流解析によるプライバシー懸念",
   "region": "国内",
   "domain": "IT",
   "organization": "渋谷データコンソーシアム他",
@@ -34,11 +34,16 @@
       "source_type": "web",
       "title": "渋谷を歩くだけで年齢から行動、服のブランドまで筒抜け？ \"AIカメラ100台設置プロジェクト\"が物議 - ITmedia NEWS",
       "url": "https://www.itmedia.co.jp/news/articles/2309/01/news168.html"
+    },
+    {
+      "source_type": "web",
+      "title": "渋谷100台プロジェクトに関するニュース - IDEA（Intelligence Design）",
+      "url": "https://idea.i-d.ai/news/news-post/370/"
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }
