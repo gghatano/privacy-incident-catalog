@@ -1,6 +1,6 @@
 {
   "id": "surv-0009",
-  "title": "【未レビュー】恋人のスマートフォンを追跡するアプリが社会問題化",
+  "title": "恋人のスマートフォンを追跡するアプリが社会問題化",
   "region": "国内",
   "domain": "IT",
   "organization": "マニュスクリプト株式会社",
@@ -34,11 +34,16 @@
       "source_type": "web",
       "title": "相手の現在地や行動、通話履歴を追跡できる「カレログ」がスパイウェア扱いに - GIGAZINE",
       "url": "https://gigazine.net/news/20110905_karelog_spyware/"
+    },
+    {
+      "source_type": "web",
+      "title": "高木浩光＠自宅の日記 - カレログの問題についての技術的・法的分析",
+      "url": "https://takagi-hiromitsu.jp/diary/20110910.html"
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }
