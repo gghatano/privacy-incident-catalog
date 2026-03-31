@@ -2,6 +2,7 @@ import { useForm, FormProvider, useFieldArray } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { caseSchema, type CaseFormData } from '../../schemas/case.schema'
+import { generateCaseId } from '../../lib/generate-id'
 import {
   REGION_OPTIONS,
   DOMAIN_OPTIONS,
@@ -30,30 +31,38 @@ export default function CaseForm({ defaultValues, isEdit }: CaseFormProps) {
   const [outputJson, setOutputJson] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
 
+  // 新規作成時はランダムIDを自動生成（既存IDがあればそちらを優先）
+  const autoId = isEdit ? '' : generateCaseId()
+  const mergedDefaults = {
+    id: '',
+    title: '',
+    region: '',
+    domain: '',
+    domain_sub: '',
+    organization: '',
+    incident_category: [] as CaseFormData['incident_category'],
+    severity: 'medium' as const,
+    occurred_at: '',
+    summary: '',
+    impact: '',
+    root_cause: '',
+    response: '',
+    lessons_learned: '',
+    tags: [] as string[],
+    sources: [{ source_type: 'web' as const, title: '', url: '', note: '' }],
+    figures: [] as CaseFormData['figures'],
+    review_status: 'ai_generated' as const,
+    status: 'seed' as const,
+    ...defaultValues,
+  }
+  // defaultValues に ID がなければ自動生成IDを使用
+  if (!mergedDefaults.id) {
+    mergedDefaults.id = autoId
+  }
+
   const methods = useForm<CaseFormData>({
     resolver: zodResolver(caseSchema),
-    defaultValues: {
-      id: '',
-      title: '',
-      region: '',
-      domain: '',
-      domain_sub: '',
-      organization: '',
-      incident_category: [],
-      severity: 'medium',
-      occurred_at: '',
-      summary: '',
-      impact: '',
-      root_cause: '',
-      response: '',
-      lessons_learned: '',
-      tags: [],
-      sources: [{ source_type: 'web', title: '', url: '', note: '' }],
-      figures: [],
-      review_status: 'ai_generated',
-      status: 'seed',
-      ...defaultValues,
-    },
+    defaultValues: mergedDefaults,
   })
 
   const {
@@ -112,7 +121,18 @@ export default function CaseForm({ defaultValues, isEdit }: CaseFormProps) {
 
           <div>
             <label htmlFor="id" className={labelClass}>ID</label>
-            <input id="id" type="text" {...register('id')} className={inputClass} placeholder="例: suica-data-sale-2013" />
+            <div className="flex gap-2 items-end">
+              <input id="id" type="text" {...register('id')} className={inputClass + ' flex-1'} placeholder="自動生成されます" />
+              {!isEdit && (
+                <button
+                  type="button"
+                  onClick={() => methods.setValue('id', generateCaseId())}
+                  className="mt-1 shrink-0 rounded border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                >
+                  再生成
+                </button>
+              )}
+            </div>
             {errors.id && <p className={errorClass}>{errors.id.message}</p>}
           </div>
 

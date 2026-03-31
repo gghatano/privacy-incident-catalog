@@ -92,7 +92,7 @@ export default function NewPage() {
               onChange={(e) => setJsonInput(e.target.value)}
               rows={8}
               className="block w-full rounded border border-blue-200 bg-white px-3 py-2 text-sm font-mono focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
-              placeholder='{"id": "breach-0001", "title": "...", ...}'
+              placeholder='{"id": "a1b2c3d4", "title": "...", ...}'
             />
           </div>
 
