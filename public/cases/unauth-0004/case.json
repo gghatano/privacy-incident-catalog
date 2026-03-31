@@ -1,6 +1,6 @@
 {
   "id": "unauth-0004",
-  "title": "【未レビュー】顧客の非公開金融情報を同意なく保険勧誘に不正利用",
+  "title": "顧客の非公開金融情報を同意なく保険勧誘に不正利用",
   "region": "国内",
   "domain": "金融",
   "organization": "日本郵政株式会社・日本郵便株式会社・株式会社かんぽ生命保険・株式会社ゆうちょ銀行",
@@ -36,11 +36,16 @@
       "source_type": "web",
       "title": "ゆうちょ銀行プレスリリース",
       "url": "https://www.jp-bank.japanpost.jp/aboutus/press/2024/abt_prs_id001905.html"
+    },
+    {
+      "source_type": "pdf",
+      "title": "郵政民営化委員会 第280回 資料 - 非公開金融情報の不適切な利用について",
+      "url": "https://www.yuseimineika.go.jp/iinkai/dai280/siryou280-2-6.pdf"
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }

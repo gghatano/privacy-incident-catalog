@@ -1,6 +1,6 @@
 {
   "id": "priv-0001",
-  "title": "【未レビュー】Suica乗降履歴データの無断販売によるプライバシー問題",
+  "title": "Suica乗降履歴データの無断販売によるプライバシー問題",
   "region": "国内",
   "domain": "モビリティ",
   "organization": "東日本旅客鉄道株式会社（JR東日本）",
@@ -46,16 +46,11 @@
       "source_type": "web",
       "title": "Suica乗降履歴を日立に提供、ネットで「不安」の声 - J-CAST ニュース",
       "url": "https://www.j-cast.com/2013/07/02178559.html?p=all"
-    },
-    {
-      "source_type": "web",
-      "title": "NHK クローズアップ現代 Suicaデータ活用の論点整理",
-      "url": "https://www.nhk.or.jp/gendai/articles/3307/"
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }

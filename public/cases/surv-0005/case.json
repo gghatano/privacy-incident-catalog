@@ -1,6 +1,6 @@
 {
   "id": "surv-0005",
-  "title": "【未レビュー】出席確認アプリが授業時間外も学生の位置情報を追跡していた問題",
+  "title": "出席確認アプリが授業時間外も学生の位置情報を追跡していた問題",
   "region": "国内",
   "domain": "教育",
   "organization": "岩手大学",
@@ -32,8 +32,8 @@
     }
   ],
   "figures": [],
-  "review_status": "ai_generated",
+  "review_status": "reviewed",
   "status": "seed",
   "created_at": "2026-03-29",
-  "updated_at": "2026-03-29"
+  "updated_at": "2026-03-30"
 }
