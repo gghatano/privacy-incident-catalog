@@ -4,8 +4,6 @@ import type { Case } from '../../types/case'
 import {
   INCIDENT_CATEGORY_OPTIONS,
   INCIDENT_CATEGORY_LABELS,
-  SEVERITY_OPTIONS,
-  SEVERITY_LABELS,
   REGION_OPTIONS,
   DOMAIN_OPTIONS,
   REVIEW_STATUS_OPTIONS,
@@ -125,15 +123,6 @@ export default function FilterPanel({ filters, cases, onToggleFilter }: FilterPa
         options={INCIDENT_CATEGORY_OPTIONS}
         labels={INCIDENT_CATEGORY_LABELS}
         selectedValues={filters.incident_category}
-        cases={cases}
-        onToggle={onToggleFilter}
-      />
-      <FilterSection
-        title="深刻度"
-        filterKey="severity"
-        options={SEVERITY_OPTIONS}
-        labels={SEVERITY_LABELS}
-        selectedValues={filters.severity}
         cases={cases}
         onToggle={onToggleFilter}
       />

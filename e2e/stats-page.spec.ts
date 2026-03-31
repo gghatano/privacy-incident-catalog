@@ -16,11 +16,8 @@ test.describe('統計ページ', () => {
     expect(countText).toMatch(/\d+/)
   })
 
-  test('カテゴリ別・深刻度別のセクションが存在する', async ({ page }) => {
+  test('カテゴリ別のセクションが存在する', async ({ page }) => {
     const categorySection = page.locator('h2', { hasText: 'カテゴリ別' })
     await expect(categorySection).toBeVisible()
-
-    const severitySection = page.locator('h2', { hasText: '深刻度別' })
-    await expect(severitySection).toBeVisible()
   })
 })
