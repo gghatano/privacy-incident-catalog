@@ -1,6 +1,6 @@
 {
   "id": "priv-0005",
-  "title": "【未レビュー】AIイラスト生成サービスに対するクリエイターの権利侵害批判と炎上",
+  "title": "AIイラスト生成サービスに対するクリエイターの権利侵害批判と炎上",
   "region": "国内",
   "domain": "IT",
   "organization": "ラディウス・ファイブ株式会社",
@@ -26,11 +26,6 @@
     "炎上"
   ],
   "sources": [
-    {
-      "source_type": "web",
-      "title": "mimic炎上",
-      "url": "https://nlab.itmedia.co.jp/nl/articles/2208/30/news150.html"
-    },
     {
       "source_type": "web",
       "title": "mimic終了",
