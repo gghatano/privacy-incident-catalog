@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 30_000,
   retries: 0,
   use: {
-    baseURL: 'http://localhost:5175',
+    baseURL: 'http://localhost:5175/privacy-incident-catalog',
     headless: true,
   },
   webServer: {

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('ナビゲーション', () => {
   test('ヘッダーのナビリンクで各ページに遷移できる', async ({ page }) => {
-    await page.goto('/#/')
+    await page.goto('/')
 
     const nav = page.locator('header nav')
 
@@ -21,7 +21,7 @@ test.describe('ナビゲーション', () => {
 
     // 事例一覧ページへ戻る
     await nav.getByText('事例一覧').click()
-    await expect(page).toHaveURL(/\/$/)
+    await expect(page).toHaveURL(/\/privacy-incident-catalog\/?$/)
     // 事例カードが表示されている
     await expect(page.locator('a[href*="cases/"]').first()).toBeVisible()
   })
