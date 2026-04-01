@@ -8,29 +8,14 @@ import SearchBar from '../components/case-list/SearchBar'
 import ActiveFilterBadges from '../components/case-list/ActiveFilterBadges'
 import FilterPanel from '../components/case-list/FilterPanel'
 import Pagination from '../components/case-list/Pagination'
-import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS } from '../constants/categories'
+import { INCIDENT_CATEGORY_LABELS } from '../constants/categories'
 import ReviewStatusBadge from '../components/ReviewStatusBadge'
-import type { Case, Severity } from '../types/case'
+import type { Case } from '../types/case'
 
 const PER_PAGE_CARD = 12
 const PER_PAGE_TABLE = 30
 
 type ViewMode = 'card' | 'table'
-
-const SEVERITY_COLORS: Record<Severity, string> = {
-  critical: 'bg-red-100 text-red-800',
-  high: 'bg-orange-100 text-orange-800',
-  medium: 'bg-yellow-100 text-yellow-800',
-  low: 'bg-green-100 text-green-800',
-}
-
-function SeverityBadge({ severity }: { severity: Severity }) {
-  return (
-    <span className={`text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap ${SEVERITY_COLORS[severity]}`}>
-      {SEVERITY_LABELS[severity]}
-    </span>
-  )
-}
 
 function CaseTable({ cases }: { cases: Case[] }) {
   return (
@@ -39,9 +24,7 @@ function CaseTable({ cases }: { cases: Case[] }) {
         <thead>
           <tr className="border-b-2 border-gray-200 bg-gray-50 text-left">
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">タイトル</th>
-            <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">組織</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">カテゴリ</th>
-            <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">深刻度</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">地域</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">分野</th>
             <th className="py-2.5 px-3 font-medium text-gray-600 whitespace-nowrap">ステータス</th>
@@ -56,7 +39,6 @@ function CaseTable({ cases }: { cases: Case[] }) {
                   {c.title}
                 </Link>
               </td>
-              <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.organization}</td>
               <td className="py-2.5 px-3">
                 <div className="flex flex-wrap gap-1">
                   {c.incident_category.map((cat) => (
@@ -66,7 +48,6 @@ function CaseTable({ cases }: { cases: Case[] }) {
                   ))}
                 </div>
               </td>
-              <td className="py-2.5 px-3"><SeverityBadge severity={c.severity} /></td>
               <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.region}</td>
               <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.domain}</td>
               <td className="py-2.5 px-3"><ReviewStatusBadge status={c.review_status} /></td>
@@ -208,10 +189,8 @@ export default function ListPage() {
                   <ReviewStatusBadge status={c.review_status} />
                 </div>
                 <h2 className="text-base font-semibold mb-2 pr-20 line-clamp-2">{c.title}</h2>
-                <p className="text-sm text-gray-600 mb-2">{c.organization}</p>
 
                 <div className="flex flex-wrap gap-1.5 mb-2">
-                  <SeverityBadge severity={c.severity} />
                   {c.incident_category.map((cat) => (
                     <span
                       key={cat}

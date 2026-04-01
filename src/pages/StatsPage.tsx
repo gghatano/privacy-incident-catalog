@@ -1,7 +1,7 @@
 import { useCases } from '../context/useCases'
 import { usePageMeta } from '../hooks/usePageMeta'
-import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
-import type { IncidentCategory, Severity, ReviewStatus } from '../types/case'
+import { INCIDENT_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
+import type { IncidentCategory, ReviewStatus } from '../types/case'
 
 function countBy<T>(items: T[], keyFn: (item: T) => string | string[]): Record<string, number> {
   const counts: Record<string, number> = {}
@@ -22,13 +22,6 @@ const CATEGORY_COLORS: Record<IncidentCategory, string> = {
   inadequate_anonymization: 'bg-purple-400',
   algorithmic_discrimination: 'bg-green-400',
   surveillance_tracking: 'bg-slate-400',
-}
-
-const SEVERITY_COLORS: Record<Severity, string> = {
-  critical: 'bg-red-400',
-  high: 'bg-orange-400',
-  medium: 'bg-yellow-400',
-  low: 'bg-green-400',
 }
 
 const REGION_COLORS: Record<string, string> = {
@@ -155,7 +148,6 @@ export default function StatsPage() {
   }
 
   const byCategory = countBy(cases, (c) => c.incident_category)
-  const bySeverity = countBy(cases, (c) => c.severity)
   const byRegion = countBy(cases, (c) => c.region)
   const byDomain = countBy(cases, (c) => c.domain)
   const byYear = countBy(cases, (c) => extractYear(c.occurred_at))
@@ -176,12 +168,6 @@ export default function StatsPage() {
           data={byCategory}
           labels={INCIDENT_CATEGORY_LABELS as Record<string, string>}
           colors={CATEGORY_COLORS}
-        />
-        <StatsSection
-          title="深刻度別"
-          data={bySeverity}
-          labels={SEVERITY_LABELS as Record<string, string>}
-          colors={SEVERITY_COLORS}
         />
         <StatsSection
           title="地域別"

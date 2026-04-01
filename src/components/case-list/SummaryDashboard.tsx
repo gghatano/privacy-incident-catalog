@@ -1,11 +1,9 @@
 import { useMemo } from 'react'
-import type { Case, IncidentCategory, Severity, ReviewStatus } from '../../types/case'
+import type { Case, IncidentCategory, ReviewStatus } from '../../types/case'
 import type { FilterKey, FilterState } from '../../hooks/useFilter'
 import {
   INCIDENT_CATEGORY_OPTIONS,
   INCIDENT_CATEGORY_LABELS,
-  SEVERITY_OPTIONS,
-  SEVERITY_LABELS,
   REVIEW_STATUS_OPTIONS,
   REVIEW_STATUS_LABELS,
 } from '../../constants/categories'
@@ -28,13 +26,6 @@ const CATEGORY_COLORS: Record<IncidentCategory, string> = {
   inadequate_anonymization: 'bg-purple-500',
   algorithmic_discrimination: 'bg-green-500',
   surveillance_tracking: 'bg-slate-500',
-}
-
-const SEVERITY_COLORS: Record<Severity, string> = {
-  critical: 'bg-red-500',
-  high: 'bg-orange-500',
-  medium: 'bg-yellow-500',
-  low: 'bg-green-500',
 }
 
 const REVIEW_STATUS_COLORS: Record<ReviewStatus, string> = {
@@ -112,7 +103,6 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
   const stats = useMemo(() => {
     const regionMap: Record<string, number> = {}
     const categoryMap: Record<string, number> = {}
-    const severityMap: Record<string, number> = {}
     const reviewStatusMap: Record<string, number> = {}
 
     for (const c of cases) {
@@ -120,11 +110,10 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
       for (const cat of c.incident_category) {
         categoryMap[cat] = (categoryMap[cat] ?? 0) + 1
       }
-      severityMap[c.severity] = (severityMap[c.severity] ?? 0) + 1
       reviewStatusMap[c.review_status] = (reviewStatusMap[c.review_status] ?? 0) + 1
     }
 
-    return { regionMap, categoryMap, severityMap, reviewStatusMap }
+    return { regionMap, categoryMap, reviewStatusMap }
   }, [cases])
 
   const total = cases.length
@@ -139,12 +128,6 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
     value: cat,
     count: stats.categoryMap[cat] ?? 0,
     color: CATEGORY_COLORS[cat],
-  }))
-
-  const severitySegments = SEVERITY_OPTIONS.map((sev) => ({
-    value: sev,
-    count: stats.severityMap[sev] ?? 0,
-    color: SEVERITY_COLORS[sev],
   }))
 
   const reviewStatusSegments = REVIEW_STATUS_OPTIONS.map((rs) => ({
@@ -210,54 +193,27 @@ export default function SummaryDashboard({ cases, onToggleFilter, filters }: Sum
         </div>
       </div>
 
-      {/* Row 2: Category + Severity */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Category */}
-        <div className="space-y-1">
-          <p className="text-xs font-medium text-gray-500">カテゴリ別</p>
-          <StackedBar
-            segments={categorySegments}
-            total={cases.reduce((s, c) => s + c.incident_category.length, 0)}
-            filterKey="incident_category"
-            activeValues={filters.incident_category}
-            onToggle={onToggleFilter}
-          />
-          <div className="flex flex-wrap gap-x-3 gap-y-1">
-            {categorySegments.map((seg) => (
-              <LegendItem
-                key={seg.value}
-                color={seg.color}
-                label={INCIDENT_CATEGORY_LABELS[seg.value as IncidentCategory]}
-                count={seg.count}
-                isActive={filters.incident_category.includes(seg.value)}
-                onClick={() => onToggleFilter('incident_category', seg.value)}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Severity */}
-        <div className="space-y-1">
-          <p className="text-xs font-medium text-gray-500">深刻度別</p>
-          <StackedBar
-            segments={severitySegments}
-            total={total}
-            filterKey="severity"
-            activeValues={filters.severity}
-            onToggle={onToggleFilter}
-          />
-          <div className="flex flex-wrap gap-x-3 gap-y-1">
-            {severitySegments.map((seg) => (
-              <LegendItem
-                key={seg.value}
-                color={seg.color}
-                label={SEVERITY_LABELS[seg.value as Severity]}
-                count={seg.count}
-                isActive={filters.severity.includes(seg.value)}
-                onClick={() => onToggleFilter('severity', seg.value)}
-              />
-            ))}
-          </div>
+      {/* Row 2: Category */}
+      <div className="space-y-1">
+        <p className="text-xs font-medium text-gray-500">カテゴリ別</p>
+        <StackedBar
+          segments={categorySegments}
+          total={cases.reduce((s, c) => s + c.incident_category.length, 0)}
+          filterKey="incident_category"
+          activeValues={filters.incident_category}
+          onToggle={onToggleFilter}
+        />
+        <div className="flex flex-wrap gap-x-3 gap-y-1">
+          {categorySegments.map((seg) => (
+            <LegendItem
+              key={seg.value}
+              color={seg.color}
+              label={INCIDENT_CATEGORY_LABELS[seg.value as IncidentCategory]}
+              count={seg.count}
+              isActive={filters.incident_category.includes(seg.value)}
+              onClick={() => onToggleFilter('incident_category', seg.value)}
+            />
+          ))}
         </div>
       </div>
     </div>

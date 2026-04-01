@@ -3,16 +3,9 @@ import { useEffect, useMemo, useState, useRef } from 'react'
 import { useCases } from '../context/useCases'
 import { loadCase } from '../lib/data-loader'
 import SourceList from '../components/case-detail/SourceList'
-import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
+import { INCIDENT_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
 import { usePageMeta } from '../hooks/usePageMeta'
-import type { Case, Severity } from '../types/case'
-
-const SEVERITY_COLORS: Record<Severity, string> = {
-  critical: 'bg-red-100 text-red-800',
-  high: 'bg-orange-100 text-orange-800',
-  medium: 'bg-yellow-100 text-yellow-800',
-  low: 'bg-green-100 text-green-800',
-}
+import type { Case } from '../types/case'
 
 function Section({ title, content }: { title: string; content: string }) {
   if (!content) return null
@@ -124,7 +117,10 @@ export default function DetailPage() {
         </Link>
       </div>
 
-      <h1 className="text-2xl font-bold mb-4">{caseData.title}</h1>
+      <div className="mb-4">
+        <p className="text-sm text-gray-500 mb-1">{caseData.id}</p>
+        <h1 className="text-2xl font-bold">{caseData.title}</h1>
+      </div>
 
       {caseData.ethical_notes && caseData.ethical_notes.length > 0 && (
         <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
@@ -152,14 +148,6 @@ export default function DetailPage() {
           <div>
             <dt className="text-gray-500">発生時期</dt>
             <dd className="font-medium">{caseData.occurred_at ?? '不明'}</dd>
-          </div>
-          <div>
-            <dt className="text-gray-500">深刻度</dt>
-            <dd>
-              <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${SEVERITY_COLORS[caseData.severity]}`}>
-                {SEVERITY_LABELS[caseData.severity]}
-              </span>
-            </dd>
           </div>
           <div>
             <dt className="text-gray-500">カテゴリ</dt>
