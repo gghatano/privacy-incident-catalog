@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gghatano.github.io/privacy-incident-catalog/sitemap.xml

@@ -1,9 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, useRef } from 'react'
 import { useCases } from '../context/useCases'
 import { loadCase } from '../lib/data-loader'
 import SourceList from '../components/case-detail/SourceList'
 import { INCIDENT_CATEGORY_LABELS, SEVERITY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
+import { usePageMeta } from '../hooks/usePageMeta'
 import type { Case, Severity } from '../types/case'
 
 const SEVERITY_COLORS: Record<Severity, string> = {
@@ -58,6 +59,43 @@ export default function DetailPage() {
 
   const caseData = contextCase ?? fetchedCase
   const loading = needsFetch && !fetchDone
+
+  usePageMeta(
+    caseData
+      ? {
+          title: caseData.title,
+          description: caseData.summary.slice(0, 160),
+        }
+      : {},
+  )
+
+  // JSON-LD structured data
+  const jsonLdRef = useRef<HTMLScriptElement | null>(null)
+  useEffect(() => {
+    if (!caseData) return
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: caseData.title,
+      description: caseData.summary.slice(0, 160),
+      author: { '@type': 'Organization', name: caseData.organization },
+      datePublished: caseData.occurred_at ?? undefined,
+      keywords: caseData.tags.join(', '),
+      url: `https://gghatano.github.io/privacy-incident-catalog/cases/${caseData.id}`,
+    })
+    document.head.appendChild(script)
+    jsonLdRef.current = script
+
+    return () => {
+      if (jsonLdRef.current) {
+        document.head.removeChild(jsonLdRef.current)
+        jsonLdRef.current = null
+      }
+    }
+  }, [caseData])
 
   if (loading) {
     return <p className="text-center py-12 text-gray-500">読み込み中...</p>
