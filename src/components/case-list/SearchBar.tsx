@@ -56,7 +56,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
         <button
           type="button"
           onClick={handleClear}
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-0.5"
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-600 p-0.5"
           aria-label="検索をクリア"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">

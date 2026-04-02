@@ -49,7 +49,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
 
       {pages.map((page, idx) =>
         page === '...' ? (
-          <span key={`ellipsis-${idx}`} className="px-2 py-2 text-sm text-gray-400">
+          <span key={`ellipsis-${idx}`} className="px-2 py-2 text-sm text-gray-500">
             …
           </span>
         ) : (

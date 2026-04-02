@@ -94,7 +94,7 @@ function FilterSection({
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   <span className="flex-1">{labels[value] ?? value}</span>
-                  <span className="text-xs text-gray-400">{count}</span>
+                  <span className="text-xs text-gray-500">{count}</span>
                 </label>
               </li>
             )
