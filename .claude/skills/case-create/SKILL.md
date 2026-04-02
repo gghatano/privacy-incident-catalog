@@ -35,6 +35,10 @@ $ARGUMENTS で指定された URL を WebFetch で取得する。テキストが
 
 スキーマは `src/schemas/case.schema.ts` に定義されている。スキーマに適合する JSON を生成する。
 
+**注意事項**:
+- 新規作成時は `review_status` を `"ai_generated"` に設定する
+- タイトルに「【未レビュー】」を付与する
+
 事例 ID は既存の `public/cases/` 配下の ID を確認し、連番で次の ID を採番する。
 
 ### 4. ファイルの保存
