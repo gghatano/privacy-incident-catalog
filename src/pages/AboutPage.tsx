@@ -1,4 +1,11 @@
+import { usePageMeta } from '../hooks/usePageMeta'
+
 export default function AboutPage() {
+  usePageMeta({
+    title: 'このサイトについて',
+    description: 'データ活用・プライバシー炎上事例カタログの目的・掲載情報・利用上の注意について。',
+  })
+
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">このサイトについて</h1>

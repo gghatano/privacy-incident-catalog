@@ -1,10 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>データ活用・プライバシー炎上事例カタログ</title>
+    <meta name="description" content="データ活用やプライバシーに関する炎上・トラブル事例を収集・整理・検索できるWebカタログ。過去の事例から学び、同様のトラブルを未然に防ぐための参考情報を提供します。" />
+    <link rel="canonical" href="https://gghatano.github.io/privacy-incident-catalog/" />
+    <link rel="icon" type="image/svg+xml" href="/privacy-incident-catalog/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="データ活用・プライバシー炎上事例カタログ" />
+    <meta property="og:description" content="データ活用やプライバシーに関する炎上・トラブル事例を収集・整理・検索できるWebカタログ。過去の事例から学び、同様のトラブルを未然に防ぐための参考情報を提供します。" />
+    <meta property="og:url" content="https://gghatano.github.io/privacy-incident-catalog/" />
+    <meta property="og:site_name" content="データ活用・プライバシー炎上事例カタログ" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="データ活用・プライバシー炎上事例カタログ" />
+    <meta name="twitter:description" content="データ活用やプライバシーに関する炎上・トラブル事例を収集・整理・検索できるWebカタログ。" />
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "データ活用・プライバシー炎上事例カタログ",
+      "url": "https://gghatano.github.io/privacy-incident-catalog/",
+      "description": "データ活用やプライバシーに関する炎上・トラブル事例を収集・整理・検索できるWebカタログ"
+    }
+    </script>
+
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
