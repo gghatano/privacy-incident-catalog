@@ -94,7 +94,7 @@ function LegendItem({
     >
       <span className={`w-3 h-3 rounded-full shrink-0 ${color}`} />
       <span>{label}</span>
-      <span className="text-gray-400">{count}</span>
+      <span className="text-gray-500">{count}</span>
     </button>
   )
 }
