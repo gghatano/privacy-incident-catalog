@@ -51,7 +51,7 @@ function CaseTable({ cases }: { cases: Case[] }) {
               <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.region}</td>
               <td className="py-2.5 px-3 text-gray-600 whitespace-nowrap">{c.domain}</td>
               <td className="py-2.5 px-3"><ReviewStatusBadge status={c.review_status} /></td>
-              <td className="py-2.5 px-3 text-gray-400 whitespace-nowrap">{c.occurred_at ?? '—'}</td>
+              <td className="py-2.5 px-3 text-gray-500 whitespace-nowrap">{c.occurred_at ?? '—'}</td>
             </tr>
           ))}
         </tbody>
@@ -202,7 +202,7 @@ export default function ListPage() {
                 </div>
 
                 {c.occurred_at && (
-                  <p className="text-xs text-gray-400 mb-2">{c.occurred_at}</p>
+                  <p className="text-xs text-gray-500 mb-2">{c.occurred_at}</p>
                 )}
 
                 <p className="text-sm text-gray-600 line-clamp-3">
