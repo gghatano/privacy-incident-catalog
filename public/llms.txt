@@ -1,0 +1,59 @@
+# データ活用・プライバシー炎上事例カタログ
+
+> データ活用やプライバシーに関する炎上・トラブル事例を収集・整理・検索できるWebカタログ。過去の事例から学び、同様のトラブルを未然に防ぐための参考情報を提供します。
+
+## サイト情報
+
+- URL: https://gghatano.github.io/privacy-incident-catalog/
+- 言語: 日本語
+- データ形式: JSON（各事例は case.json として公開）
+
+## 主要ページ
+
+- [事例一覧](https://gghatano.github.io/privacy-incident-catalog/): 全事例の検索・フィルタリング
+- [統計](https://gghatano.github.io/privacy-incident-catalog/stats): カテゴリ別・深刻度別の統計情報
+- [このサイトについて](https://gghatano.github.io/privacy-incident-catalog/about): サイトの目的と注意事項
+
+## 事例カテゴリ
+
+- data_breach: 情報漏洩
+- privacy_violation: プライバシー侵害
+- unauthorized_use: 無断利用
+- inadequate_anonymization: 不十分な匿名化
+- algorithmic_discrimination: アルゴリズムによる差別
+- surveillance_tracking: 監視・追跡
+
+## 深刻度
+
+- critical: 重大（社会的影響が極めて大きい）
+- high: 高（大規模な影響）
+- medium: 中（限定的な影響）
+- low: 低（軽微な影響）
+
+## データ構造
+
+各事例（case.json）は以下のフィールドを持ちます:
+
+- id: 事例ID
+- title: タイトル
+- region: 地域
+- domain: 分野
+- organization: 組織名
+- incident_category: カテゴリ（複数可）
+- severity: 深刻度
+- occurred_at: 発生時期
+- summary: 概要
+- impact: 影響
+- root_cause: 根本原因
+- response: 対応
+- lessons_learned: 教訓
+- tags: タグ
+- sources: 出典（URL付き）
+
+## API的なアクセス
+
+個別の事例データは以下のURLパターンでJSON形式で取得できます:
+`https://gghatano.github.io/privacy-incident-catalog/cases/{事例ID}/case.json`
+
+事例ID一覧:
+`https://gghatano.github.io/privacy-incident-catalog/cases/index.json`

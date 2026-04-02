@@ -1,4 +1,5 @@
 import { useCases } from '../context/useCases'
+import { usePageMeta } from '../hooks/usePageMeta'
 import { INCIDENT_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../constants/categories'
 import type { IncidentCategory, ReviewStatus } from '../types/case'
 
@@ -131,6 +132,11 @@ function extractYear(occurredAt: string | null): string {
 }
 
 export default function StatsPage() {
+  usePageMeta({
+    title: '統計',
+    description: 'データ活用・プライバシー炎上事例のカテゴリ別・深刻度別・地域別の統計情報。',
+  })
+
   const { cases, loading, error } = useCases()
 
   if (loading) {

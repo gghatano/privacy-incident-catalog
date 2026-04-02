@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('統計ページ', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/#/stats')
+    await page.goto('/privacy-incident-catalog/stats')
   })
 
   test('統計ページに総事例数が表示される', async ({ page }) => {

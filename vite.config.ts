@@ -5,7 +5,7 @@ import generateCaseIndex from './plugins/generate-case-index'
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), generateCaseIndex()],
-  base: './',
+  base: '/privacy-incident-catalog/',
   test: {
     globals: true,
     environment: 'jsdom',

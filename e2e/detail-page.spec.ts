@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.describe('詳細ページ', () => {
   test('一覧から事例カードをクリックすると詳細ページに遷移する', async ({ page }) => {
-    await page.goto('/#/')
+    await page.goto('/privacy-incident-catalog/')
 
     // 最初の事例カードをクリック
     const firstCard = page.locator('a[href*="cases/"]').first()
@@ -14,7 +14,7 @@ test.describe('詳細ページ', () => {
   })
 
   test('詳細ページにタイトル、概要、出典セクションが表示される', async ({ page }) => {
-    await page.goto('/#/')
+    await page.goto('/privacy-incident-catalog/')
 
     const firstCard = page.locator('a[href*="cases/"]').first()
     await expect(firstCard).toBeVisible()
@@ -37,7 +37,7 @@ test.describe('詳細ページ', () => {
   })
 
   test('「一覧に戻る」リンクで一覧に戻れる', async ({ page }) => {
-    await page.goto('/#/')
+    await page.goto('/privacy-incident-catalog/')
 
     const firstCard = page.locator('a[href*="cases/"]').first()
     await expect(firstCard).toBeVisible()
@@ -51,6 +51,6 @@ test.describe('詳細ページ', () => {
     await backLink.click()
 
     // 一覧ページに戻る（URLがルートに戻る）
-    await expect(page).toHaveURL(/\/$/)
+    await expect(page).toHaveURL(/\/privacy-incident-catalog\/?$/)
   })
 })

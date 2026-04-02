@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCases } from '../context/useCases'
+import { usePageMeta } from '../hooks/usePageMeta'
 import { useFilter } from '../hooks/useFilter'
 import SummaryDashboard from '../components/case-list/SummaryDashboard'
 import SearchBar from '../components/case-list/SearchBar'
@@ -60,6 +61,8 @@ function CaseTable({ cases }: { cases: Case[] }) {
 }
 
 export default function ListPage() {
+  usePageMeta()
+
   const { cases, loading, error } = useCases()
   const { filters, filtered, setQuery, setPage, toggleFilter, clearFilters } = useFilter(cases)
   const [drawerOpen, setDrawerOpen] = useState(false)
