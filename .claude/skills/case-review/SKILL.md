@@ -129,6 +129,15 @@ $ARGUMENTS がパスなら直接読む。事例IDなら `public/cases/{ID}/case.
 - incident_category の選択が事例内容に合致するか
 - domain の選択が適切か
 
+## 7. レビュー完了フロー
+
+レビュー結果に基づき、`review_status` フィールドを更新する:
+
+- **レビュー完了時**: `review_status` を `"human_reviewed"` に変更する
+- **事例として不適切な場合**: `review_status` を `"flagged"` に変更する
+
+また、レビュー完了時はタイトルから「【未レビュー】」を除去する。
+
 ## 最重要ルール（厳守）
 
 1. **明記されていない因果関係は推定しない**
