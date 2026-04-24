@@ -202,8 +202,10 @@ $ARGUMENTS がパスなら直接読む。事例IDなら `public/cases/{ID}/case.
 レビューの結果、総合判定が「正確」または「概ね正確」（軽微な修正のみ）の場合:
 
 1. 指摘事項があれば case.json を修正する
-2. title から「【未レビュー】」を削除する
-3. `npm run validate` でバリデーションを確認する
+2. `review_status` を `"human_reviewed"` に変更する
+3. title から「【未レビュー】」を削除する
+4. `npm run validate` でバリデーションを確認する
 
 総合判定が「事例として不適切」の場合:
-1. 事例の削除を推奨し、ユーザーに確認する
+1. `review_status` を `"flagged"` に変更する
+2. 事例の削除を推奨し、ユーザーに確認する
