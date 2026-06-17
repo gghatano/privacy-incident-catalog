@@ -1,0 +1,81 @@
+{
+  "id": "anon-0005",
+  "title": "【未レビュー】CNIL、IQVIAの健康データを「匿名」ではなく「仮名化された個人データ」と判断し500万ユーロ制裁",
+  "region": "国外",
+  "country": "フランス",
+  "domain": "医療",
+  "domain_sub": "ヘルスデータ・ウェアハウス",
+  "organization": "IQVIA OPERATIONS FRANCE",
+  "incident_category": [
+    "inadequate_anonymization",
+    "privacy_violation"
+  ],
+  "severity": "high",
+  "occurred_at": "2026-05",
+  "summary": "2026年5月26日、フランスのデータ保護当局CNILは、IQVIA OPERATIONS FRANCEに対し500万ユーロの制裁金を科す決定（SAN-2026-008）を行い、5月28日に公表した。IQVIAはCNILの承認を受けた2つの健康データウェアハウス（約14,000の薬局から収集したLRX、複数千名の医師から収集したEMR）を運用していた。IQVIAはこれらのデータを「匿名データ」でありGDPR等の規制対象外と主張したが、CNILは患者ごとの一意識別子の存在、データの粒度の高さ、保有データと公開情報の突合可能性などから、合理的手段による再識別が可能であり、匿名データではなく仮名化された個人データに該当すると判断した。",
+  "impact": "IQVIAに対し500万ユーロの制裁金が科され、加えて6か月以内の是正命令と、遅延1日あたり1万ユーロの追加制裁金が課された。本決定は同一のアーキテクチャを共有する102の事業者にも影響を及ぼすと報じられた。健康データのように粒度が高く履歴性・一意識別子・外部データとの突合可能性があるデータについて、直接識別子の削除やハッシュ化・仮名化だけでは匿名化とは評価されないことが、当局の正式決定として明確に示された。",
+  "root_cause": "IQVIAは直接識別子を外した健康データを「匿名データ」と位置づけ、データ保護規制の対象外として扱っていたが、CNILは再識別リスクが消去されていないと判断した。具体的には、患者ごとの一意識別子が存在すること、年齢・性別・処方・診断・症状・身長体重・検査・ワクチン・病欠等とデータの粒度が高いこと、同一患者の診療・処方履歴を追跡できること、IQVIAが保有するデータと公開情報を組み合わせることで合理的手段による再識別が可能であることが指摘された。情報提供、権利行使、データセキュリティ等に関する保証措置の遵守も不十分とされた。",
+  "response": "CNILは2026年5月26日付の決定SAN-2026-008で500万ユーロの制裁金を決定し、6か月以内の是正命令（遅延1日あたり1万ユーロの制裁金付き）を課した。正式決定文では、匿名化判断の観点として individualisation（個人の切り出し）、corrélation（レコード間の関連付け）、inférence（属性推論）のリスクが参照されている。決定は2026年5月28日に公表された。",
+  "lessons_learned": "直接識別子を削除しハッシュ化や仮名化を行っていても、それだけでは匿名化とは評価されない。特に健康データのように粒度が高く、履歴性・一意識別子・外部データとの突合可能性がある場合、匿名化の成立は厳しく評価される。「匿名加工済み」「匿名データ」と説明する場合は、singling out（個人の切り出し）、linkability（連結可能性）、inference（属性推論）、合理的手段による再識別可能性まで含めたリスク評価が必要である。データが仮名化された個人データに該当する場合は、情報提供、権利行使、目的・根拠、セキュリティ、利用範囲等の規制対応が引き続き求められる。",
+  "tags": [
+    "匿名化不備",
+    "仮名化",
+    "再識別",
+    "健康データ",
+    "GDPR",
+    "CNIL",
+    "IQVIA",
+    "データウェアハウス",
+    "制裁金"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Health data: fine of 5 million euros against IQVIA | CNIL",
+      "url": "https://www.cnil.fr/en/health-data-fine-5-million-euros-against-iqvia"
+    },
+    {
+      "source_type": "web",
+      "title": "Délibération SAN-2026-008 du 26 mai 2026 concernant la société IQVIA OPERATIONS FRANCE - Légifrance",
+      "url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000054136834"
+    },
+    {
+      "source_type": "web",
+      "title": "The CNIL Fines IQVIA €5 Million: Pseudonymization Remains GDPR for Key Holders - ActuIA",
+      "url": "https://www.actuia.com/en/news/the-cnil-fines-iqvia-eur5-million-pseudonymization-remains-gdpr-for-key-holders/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "健康データの匿名化判断をめぐるデータフロー",
+      "data": {
+        "nodes": [
+          { "id": "source", "label": "約14,000の薬局・複数千名の医師から処方・診療データを収集（LRX/EMR）", "category": "source" },
+          { "id": "trigger", "label": "IQVIAが直接識別子を外し「匿名データ」として規制対象外と主張", "category": "trigger" },
+          { "id": "incident", "label": "CNILが一意識別子・高い粒度・公開情報との突合可能性から仮名化された個人データと判断", "category": "incident" },
+          { "id": "impact", "label": "500万ユーロの制裁金、同一構造の102事業者に影響", "category": "impact" },
+          { "id": "response", "label": "6か月以内の是正命令（遅延1日あたり1万ユーロ）", "category": "response" }
+        ],
+        "edges": [
+          { "from": "source", "to": "trigger", "label": "ウェアハウスで蓄積" },
+          { "from": "trigger", "to": "incident", "label": "当局による評価" },
+          { "from": "incident", "to": "impact", "label": "制裁決定" },
+          { "from": "impact", "to": "response", "label": "是正命令" }
+        ]
+      },
+      "note": "CNILは individualisation・corrélation・inférence の観点から再識別リスクを評価し、匿名データではなく仮名化された個人データと結論づけた。"
+    }
+  ],
+  "review_status": "ai_generated",
+  "status": "seed",
+  "related_laws": ["GDPR", "フランス・データ保護法"],
+  "penalty_amount": {
+    "amount": 5000000,
+    "currency": "EUR",
+    "authority": "CNIL（フランス国家情報処理・自由委員会）"
+  },
+  "ethical_notes": [
+    "本事例はCNILの公式発表および公開報道に基づいて記述しています。被害を受けた個人の特定情報は含みません。"
+  ]
+}

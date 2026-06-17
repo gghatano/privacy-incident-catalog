@@ -1,0 +1,77 @@
+{
+  "id": "algo-0005",
+  "title": "【未レビュー】子どもの顔画像から自閉症を判定するAI研究、無断収集データセットで大量論文撤回",
+  "region": "国外",
+  "domain": "医療",
+  "domain_sub": "AI研究・学術出版",
+  "organization": "学術出版社（Springer Nature、PLOS、Elsevier、IEEE 等）",
+  "incident_category": [
+    "algorithmic_discrimination",
+    "privacy_violation",
+    "unauthorized_use"
+  ],
+  "severity": "high",
+  "occurred_at": "2025",
+  "summary": "顔画像から自閉スペクトラム症（ASD）を判定する深層学習研究が、子どもの顔画像を無断収集したデータセットに依拠していたとして、2025年に多数の論文が撤回された。問題のデータセットは、退職したエンジニアが2019年に自閉症関連のウェブサイトから子どもの写真をダウンロードして作成し、Kaggleで公開したもので、写っている子どものASD診断は検証されておらず、保護者が画像の公開・研究利用に同意したかも不明とされる。各出版社は、データセットの倫理面と妥当性への懸念から、これを用いた論文の信頼性を維持できないと判断した。",
+  "impact": "Springer Nature社は合計約38件の論文・会議録・書籍章を撤回対象として特定し、IEEEは当該Kaggleデータセットを用いた25件の論文に懸念表明（expression of concern）を付した。ElsevierやPLOSも該当論文を撤回した。PLOS Oneでは関連論文が2025年12月23日にサイトから削除され、うち1件は同年12月16日に子どもの顔写真を除去する形で再公開された後に削除された。顔の外見的特徴から自閉症を判定するという科学的妥当性そのものに加え、同意を得ずに収集した子どもの顔画像を医療AI研究に利用することの倫理的問題が広く議論された。",
+  "root_cause": "研究に用いられたKaggleの「自閉症児顔画像データセット」は、自閉症関連サイトから無断でダウンロードされた子どもの写真で構成されており、写っている子どものASD診断は臨床的に検証されていなかった。画像ごとに照明や角度が異なり、顔の特徴差を識別する科学的根拠としても疑わしいものであった。研究者・査読者・出版社が、データセットの出所・同意・診断の妥当性を十分に確認しないまま、「分野の標準的慣行」と考えて利用・公表したことが背景にあるとされる。顔の外見から神経発達特性を推定するという発想自体が、骨相学的な偏見を再生産するリスクをはらむ。",
+  "response": "懸念が表面化した後、Springer Natureは約38件を撤回対象として特定し、IEEEは25件に懸念表明を付した。ElsevierおよびPLOSも該当論文を撤回した。PLOS Oneは2025年12月、複数の関連論文を撤回・削除し、子どもの顔写真を含む版を差し替える対応を取った。著者の一部は、Kaggleデータセットの利用は分野の標準的慣行と考えた善意の判断であったと説明したと報じられている。",
+  "lessons_learned": "公開データセットであっても、出所・同意・対象者の診断の妥当性を確認せずに利用してはならない。特に未成年者の顔画像のような機微なデータは、保護者の同意と倫理審査を欠いた利用が重大な権利侵害となる。顔の外見的特徴から自閉症などの神経発達特性を判定するというタスクは、科学的妥当性が乏しいだけでなく、外見に基づく差別や偏見（骨相学的バイアス）を再生産する危険がある。研究者・査読者・出版社の各段階で、データセットの来歴（データ・プロビナンス）と倫理的正当性を検証する仕組みが求められる。",
+  "tags": [
+    "自閉症",
+    "顔画像",
+    "医療AI",
+    "アルゴリズム差別",
+    "子どもの個人情報",
+    "同意なきデータ利用",
+    "論文撤回",
+    "データセット倫理",
+    "Kaggle",
+    "骨相学バイアス"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Exclusive: Springer Nature retracts, removes nearly 40 publications that trained neural networks on 'bonkers' dataset - The Transmitter",
+      "url": "https://www.thetransmitter.org/retraction/exclusive-springer-nature-retracts-removes-nearly-40-publications-that-trained-neural-networks-on-bonkers-dataset/"
+    },
+    {
+      "source_type": "web",
+      "title": "Retraction: A deep learning-based ensemble for autism spectrum disorder diagnosis using facial images - PLOS One",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0340328"
+    },
+    {
+      "source_type": "web",
+      "title": "Why dozens of autism publications were retracted - Medical Brief",
+      "url": "https://www.medicalbrief.co.za/why-dozens-of-autism-publications-were-retracted/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "無断収集データセットによる自閉症判定AI研究のデータフロー",
+      "data": {
+        "nodes": [
+          { "id": "source", "label": "自閉症関連サイトから無断収集された子どもの顔画像（2019年作成のKaggleデータセット）", "category": "source" },
+          { "id": "trigger", "label": "顔画像から自閉症を判定する深層学習研究に利用・多数の論文として公表", "category": "trigger" },
+          { "id": "incident", "label": "診断未検証・保護者の同意不明・科学的妥当性への懸念が指摘", "category": "incident" },
+          { "id": "impact", "label": "Springer Nature約38件を撤回、IEEE25件に懸念表明、PLOS・Elsevierも撤回", "category": "impact" },
+          { "id": "response", "label": "各出版社が論文の撤回・削除・差し替えを実施、データ倫理を議論", "category": "response" }
+        ],
+        "edges": [
+          { "from": "source", "to": "trigger", "label": "学習データとして利用" },
+          { "from": "trigger", "to": "incident", "label": "倫理・妥当性の問題発覚" },
+          { "from": "incident", "to": "impact", "label": "信頼性喪失" },
+          { "from": "impact", "to": "response", "label": "出版社の対応" }
+        ]
+      },
+      "note": "公開データセットでも来歴・同意・診断の妥当性の検証を欠くと、機微な子どもの顔画像が同意なく研究に流用される。顔の外見からの自閉症判定は科学的妥当性にも乏しい。"
+    }
+  ],
+  "review_status": "ai_generated",
+  "status": "seed",
+  "ethical_notes": [
+    "本事例は学術出版社の撤回通知および公開報道に基づいて記述しています。被害を受けた子どもの特定情報は含みません。",
+    "顔の外見的特徴から自閉症を判定するという主張には科学的妥当性への重大な疑義があり、本カタログはこうした手法を支持するものではありません。"
+  ]
+}
